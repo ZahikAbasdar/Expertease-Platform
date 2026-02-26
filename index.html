@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Expertease Platform – Premium Saudi Arabia Healthcare Exam Preparation. Prometric, OET, IELTS coaching by licensed professionals.">
+<meta name="keywords" content="Prometric, OET, IELTS, Saudi Arabia, healthcare exam, SCFHS, medical lab, nursing, physiotherapy">
+<title>Expertease Platform | Premium Healthcare Exam Preparation</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green: #006C35;
+  --green-light: #007A3D;
+  --green-dark: #004d26;
+  --green-glow: rgba(0,108,53,0.15);
+  --gold: #C9A84C;
+  --gold-light: #E2C97E;
+  --gold-dark: #9E7B2E;
+  --white: #F8F6F0;
+  --off-white: #EDE8DF;
+  --text-dark: #1A1A1A;
+  --text-mid: #3D3D3D;
+  --text-muted: #6B6B6B;
+  --glass: rgba(255,255,255,0.08);
+  --glass-border: rgba(201,168,76,0.25);
+  --shadow: 0 20px 60px rgba(0,0,0,0.15);
+  --shadow-sm: 0 4px 20px rgba(0,0,0,0.08);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Crimson Pro', Georgia, serif; background: #F4F1EA; color: var(--text-dark); overflow-x: hidden; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--off-white); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* ─── TOP BAR ─── */
+.top-bar { background: var(--green-dark); padding: 8px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.top-bar-item { color: var(--gold-light); font-family: 'Josefin Sans', sans-serif; font-size: 0.78rem; letter-spacing: 0.05em; display: flex; align-items: center; gap: 6px; }
+.top-bar-item span { color: rgba(255,255,255,0.7); }
+
+/* ─── HEADER ─── */
+header { background: linear-gradient(135deg, #002E16 0%, var(--green-dark) 40%, #003D1E 100%); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid var(--gold); box-shadow: 0 4px 30px rgba(0,0,0,0.4); }
+.logo-area { display: flex; align-items: center; gap: 14px; padding: 16px 0; text-decoration: none; }
+.logo-emblem { width: 52px; height: 52px; background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold-dark) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 900; color: var(--green-dark); box-shadow: 0 4px 15px rgba(201,168,76,0.4); flex-shrink: 0; }
+.logo-text-area { display: flex; flex-direction: column; }
+.logo-name { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--white); letter-spacing: 0.02em; line-height: 1.1; }
+.logo-tag { font-family: 'Josefin Sans', sans-serif; font-size: 0.65rem; color: var(--gold-light); letter-spacing: 0.18em; text-transform: uppercase; }
+nav { display: flex; align-items: center; gap: 2px; }
+nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-family: 'Josefin Sans', sans-serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 8px 14px; border-radius: 6px; transition: all 0.3s ease; white-space: nowrap; }
+nav a:hover { color: var(--gold-light); background: rgba(201,168,76,0.12); }
+nav a.nav-cta { background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%); color: var(--green-dark) !important; font-weight: 700; padding: 8px 18px; }
+nav a.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 15px rgba(201,168,76,0.4); }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 10px; }
+.hamburger span { width: 24px; height: 2px; background: var(--gold-light); border-radius: 2px; transition: all 0.3s; }
+.mobile-nav { display: none; flex-direction: column; background: var(--green-dark); padding: 20px 40px; gap: 4px; border-top: 1px solid rgba(201,168,76,0.2); }
+.mobile-nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-family: 'Josefin Sans', sans-serif; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.mobile-nav.open { display: flex; }
+
+/* ─── HERO ─── */
+.hero { min-height: 92vh; background: linear-gradient(160deg, #001A0D 0%, #003018 40%, #00421F 70%, #002814 100%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 80px 40px; }
+.hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(ellipse 60% 60% at 80% 30%, rgba(201,168,76,0.08) 0%, transparent 60%), radial-gradient(ellipse 40% 40% at 20% 70%, rgba(0,108,53,0.2) 0%, transparent 60%); }
+.hero-pattern { position: absolute; inset: 0; opacity: 0.04; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A84C' fill-opacity='1'%3E%3Cpath d='M30 0l5 10H25L30 0zM0 30l10-5v10L0 30zm60 0l-10 5V25l10 5zM30 60l-5-10h10L30 60z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+.hero-content { text-align: center; max-width: 860px; position: relative; z-index: 2; animation: fadeUp 0.9s ease both; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.35); border-radius: 50px; padding: 6px 20px; margin-bottom: 28px; font-family: 'Josefin Sans', sans-serif; font-size: 0.75rem; letter-spacing: 0.15em; color: var(--gold-light); text-transform: uppercase; }
+.hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); animation: pulse 2s ease infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.3)} }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.6rem, 6vw, 5rem); font-weight: 700; color: var(--white); line-height: 1.12; margin-bottom: 20px; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+.hero h1 em { font-style: normal; color: var(--gold); display: block; }
+.hero p { font-size: 1.2rem; color: rgba(255,255,255,0.7); max-width: 580px; margin: 0 auto 36px; line-height: 1.7; font-weight: 300; }
+.hero-courses { display: flex; justify-content: center; gap: 16px; margin-bottom: 40px; flex-wrap: wrap; }
+.course-pill { background: rgba(255,255,255,0.07); border: 1px solid rgba(201,168,76,0.3); border-radius: 12px; padding: 18px 28px; text-align: center; backdrop-filter: blur(10px); cursor: pointer; transition: all 0.35s ease; text-decoration: none; min-width: 140px; }
+.course-pill:hover { background: rgba(201,168,76,0.15); border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 12px 30px rgba(201,168,76,0.2); }
+.course-pill-icon { font-size: 2rem; margin-bottom: 8px; display: block; }
+.course-pill-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--white); display: block; }
+.course-pill-sub { font-family: 'Josefin Sans', sans-serif; font-size: 0.68rem; letter-spacing: 0.1em; color: var(--gold-light); display: block; margin-top: 2px; }
+.hero-cta { display: inline-block; background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%); color: var(--green-dark); text-decoration: none; font-family: 'Josefin Sans', sans-serif; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 16px 44px; border-radius: 8px; border: none; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 8px 30px rgba(201,168,76,0.35); }
+.hero-cta:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(201,168,76,0.5); }
+
+/* ─── SECTIONS ─── */
+section { padding: 90px 40px; }
+.section-label { font-family: 'Josefin Sans', sans-serif; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 10px; display: flex; align-items: center; gap: 12px; }
+.section-label::before, .section-label::after { content: ''; height: 1px; width: 40px; background: var(--gold); }
+.section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--green-dark); line-height: 1.15; margin-bottom: 14px; }
+.section-title span { color: var(--gold-dark); }
+.section-subtitle { font-size: 1.1rem; color: var(--text-muted); max-width: 560px; line-height: 1.7; font-weight: 300; }
+.text-center { text-align: center; }
+.text-center .section-label { justify-content: center; }
+.text-center .section-subtitle { margin: 0 auto; }
+.container { max-width: 1180px; margin: 0 auto; }
+
+/* ─── STATS BAR ─── */
+.stats-bar { background: linear-gradient(90deg, var(--green-dark) 0%, var(--green) 50%, var(--green-dark) 100%); padding: 36px 40px; display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
+.stat-item { text-align: center; color: white; }
+.stat-num { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 900; color: var(--gold-light); line-height: 1; }
+.stat-label { font-family: 'Josefin Sans', sans-serif; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-top: 6px; }
+
+/* ─── FACULTY ─── */
+#faculty { background: linear-gradient(160deg, #F0EDE4 0%, #E8E3D8 100%); }
+.faculty-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; margin-top: 50px; }
+.faculty-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid rgba(201,168,76,0.18); transition: all 0.4s ease; position: relative; }
+.faculty-card:hover { transform: translateY(-8px); box-shadow: 0 30px 60px rgba(0,0,0,0.12); border-color: rgba(201,168,76,0.4); }
+.faculty-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--green) 0%, var(--gold) 100%); }
+.faculty-img-area { background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%); height: 180px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.faculty-img-area::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 60%, rgba(201,168,76,0.2) 0%, transparent 60%); }
+.faculty-avatar { width: 90px; height: 90px; border-radius: 50%; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; color: var(--gold-light); border: 3px solid rgba(201,168,76,0.5); position: relative; z-index: 1; }
+.faculty-body { padding: 24px 26px 28px; }
+.faculty-name { font-family: 'Playfair Display', serif; font-size: 1.45rem; font-weight: 700; color: var(--green-dark); margin-bottom: 4px; }
+.faculty-role { font-family: 'Josefin Sans', sans-serif; font-size: 0.75rem; letter-spacing: 0.1em; color: var(--gold-dark); text-transform: uppercase; margin-bottom: 14px; }
+.faculty-desc { font-size: 0.95rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 16px; }
+.faculty-section { margin-bottom: 14px; }
+.faculty-section-title { font-family: 'Josefin Sans', sans-serif; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--green); margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1px solid rgba(0,108,53,0.12); }
+.faculty-qual-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.faculty-qual-list li { font-size: 0.88rem; color: var(--text-mid); padding-left: 16px; position: relative; line-height: 1.5; }
+.faculty-qual-list li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 0.5rem; top: 5px; }
+.specialty-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.specialty-tag { background: var(--green-glow); border: 1px solid rgba(0,108,53,0.2); color: var(--green); font-family: 'Josefin Sans', sans-serif; font-size: 0.68rem; letter-spacing: 0.05em; padding: 3px 10px; border-radius: 50px; }
+
+/* ─── COURSES ─── */
+#courses { background: white; }
+.courses-tabs { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin: 36px 0 40px; }
+.course-tab { background: transparent; border: 2px solid rgba(0,108,53,0.2); color: var(--green); font-family: 'Josefin Sans', sans-serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 20px; border-radius: 50px; cursor: pointer; transition: all 0.3s; }
+.course-tab.active, .course-tab:hover { background: var(--green); color: white; border-color: var(--green); }
+.courses-group { display: none; }
+.courses-group.active { display: block; }
+.courses-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.course-card { background: linear-gradient(145deg, #FAFAF7 0%, #F4F1EA 100%); border: 1px solid rgba(201,168,76,0.2); border-radius: 16px; padding: 24px; transition: all 0.35s ease; position: relative; overflow: hidden; }
+.course-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: linear-gradient(180deg, var(--green) 0%, var(--gold) 100%); }
+.course-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-color: rgba(201,168,76,0.4); }
+.course-card-number { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; color: rgba(0,108,53,0.06); position: absolute; top: 10px; right: 16px; line-height: 1; }
+.course-card-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--green-dark); margin-bottom: 8px; line-height: 1.3; }
+.course-card-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 12px; }
+
+/* COURSE PRICING */
+.course-price-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+.price-old { font-family: 'Josefin Sans', sans-serif; font-size: 0.92rem; font-weight: 700; color: #e03333; text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: #e03333; }
+.price-new { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 900; background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; filter: drop-shadow(0 1px 4px rgba(201,168,76,0.35)); }
+.price-badge { background: linear-gradient(135deg, var(--green-dark), var(--green)); color: white; font-family: 'Josefin Sans', sans-serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border-radius: 50px; }
+
+/* BUTTONS */
+.btn { display: inline-block; font-family: 'Josefin Sans', sans-serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; padding: 9px 20px; border-radius: 6px; cursor: pointer; border: none; transition: all 0.3s; text-decoration: none; }
+.btn-gold { background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%); color: var(--green-dark); box-shadow: 0 4px 15px rgba(201,168,76,0.3); }
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(201,168,76,0.4); }
+.btn-green { background: var(--green); color: white; }
+.btn-green:hover { background: var(--green-light); transform: translateY(-2px); }
+.btn-outline { background: transparent; border: 1.5px solid var(--green); color: var(--green); }
+.btn-outline:hover { background: var(--green); color: white; }
+
+/* ─── ABOUT SECTION ─── */
+#about {
+  background: linear-gradient(160deg, #001A0D 0%, #002E18 50%, #001A0D 100%);
+  position: relative;
+  overflow: hidden;
+}
+#about .section-title { color: white; }
+#about .section-label { color: var(--gold-light); }
+
+.about-bg-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A84C' fill-opacity='1'%3E%3Cpath d='M30 0l5 10H25L30 0zM0 30l10-5v10L0 30zm60 0l-10 5V25l10 5zM30 60l-5-10h10L30 60z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.about-orb-1 {
+  position: absolute;
+  top: -120px; right: -120px;
+  width: 450px; height: 450px;
+  background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%);
+  border-radius: 50%; pointer-events: none;
+}
+.about-orb-2 {
+  position: absolute;
+  bottom: -100px; left: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(0,108,53,0.12) 0%, transparent 70%);
+  border-radius: 50%; pointer-events: none;
+}
+
+/* founding story grid */
+.about-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin: 56px 0 48px;
+  align-items: center;
+}
+.about-story-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  color: white;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+.about-story-text p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.62);
+  line-height: 1.82;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+.about-story-text blockquote {
+  border-left: 3px solid var(--gold);
+  padding-left: 18px;
+  font-style: italic;
+  color: rgba(255,255,255,0.5);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-top: 4px;
+}
+.about-founded-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(201,168,76,0.12);
+  border: 1px solid rgba(201,168,76,0.28);
+  border-radius: 50px;
+  padding: 6px 18px;
+  margin-bottom: 22px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+}
+.about-founded-tag::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: pulse 2s ease infinite;
+}
+
+/* stats cards */
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.about-stat-card {
+  border-radius: 18px;
+  padding: 28px 22px;
+  text-align: center;
+  transition: transform 0.3s;
+  cursor: default;
+}
+.about-stat-card:hover { transform: translateY(-6px); }
+.about-stat-card.gold {
+  background: rgba(201,168,76,0.07);
+  border: 1px solid rgba(201,168,76,0.24);
+}
+.about-stat-card.green {
+  background: rgba(0,108,53,0.12);
+  border: 1px solid rgba(0,108,53,0.28);
+}
+.about-stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.about-stat-card.gold .about-stat-num { color: var(--gold-light); }
+.about-stat-card.green .about-stat-num { color: #7FD4A0; }
+.about-stat-desc {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+
+/* leadership */
+.about-leadership {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(201,168,76,0.18);
+  border-radius: 20px;
+  padding: 36px;
+  margin-bottom: 48px;
+}
+.about-leadership-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.about-leadership-title::after { content: ''; flex: 1; height: 1px; background: rgba(201,168,76,0.18); }
+.about-leaders-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 24px;
+}
+.about-leader {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.about-leader-avatar {
+  width: 62px; height: 62px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem; font-weight: 700;
+  color: var(--green-dark);
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(201,168,76,0.28);
+}
+.about-leader-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 3px;
+}
+.about-leader-role {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+.about-kashmir-note {
+  background: rgba(201,168,76,0.06);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 0.96rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.75;
+  font-weight: 300;
+}
+.about-kashmir-note strong { color: var(--gold-light); }
+
+/* academy 2026 */
+.about-academy {
+  background: linear-gradient(135deg, rgba(0,108,53,0.15) 0%, rgba(201,168,76,0.06) 100%);
+  border: 1px solid rgba(0,108,53,0.3);
+  border-radius: 24px;
+  padding: 44px;
+  margin-bottom: 48px;
+  position: relative;
+  overflow: hidden;
+}
+.about-academy-orb {
+  position: absolute;
+  top: -30px; right: -30px;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
+  border-radius: 50%; pointer-events: none;
+}
+.about-academy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: var(--green-dark);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 50px;
+  margin-bottom: 22px;
+}
+.about-academy h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.85rem;
+  color: white;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 1;
+}
+.about-academy h3 span { color: var(--gold); }
+.about-academy > p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.82;
+  font-weight: 300;
+  margin-bottom: 28px;
+  max-width: 680px;
+  position: relative;
+  z-index: 1;
+}
+.about-academy-focus {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  position: relative;
+  z-index: 1;
+}
+.academy-focus-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 14px 18px;
+  transition: all 0.3s;
+}
+.academy-focus-item:hover {
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(201,168,76,0.3);
+  transform: translateY(-2px);
+}
+.academy-focus-item span:first-child { font-size: 1.4rem; flex-shrink: 0; }
+.academy-focus-label {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.76rem;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.4;
+}
+
+/* commitment */
+.about-commitment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.about-commitment-card {
+  border-radius: 18px;
+  padding: 32px;
+}
+.about-commitment-card.plain {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(201,168,76,0.16);
+}
+.about-commitment-card.quote-card {
+  background: linear-gradient(135deg, rgba(201,168,76,0.1) 0%, rgba(201,168,76,0.04) 100%);
+  border: 1px solid rgba(201,168,76,0.25);
+  position: relative;
+  overflow: hidden;
+}
+.about-commitment-card .card-icon { font-size: 2rem; margin-bottom: 14px; display: block; }
+.about-commitment-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 12px;
+}
+.about-commitment-card p {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.8;
+  font-weight: 300;
+}
+.about-commitment-card p.italic { font-style: italic; }
+.about-quote-divider {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.about-quote-divider div { height: 1px; flex: 1; background: linear-gradient(90deg, rgba(201,168,76,0.4), transparent); }
+.about-quote-divider span {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.about-crescent {
+  position: absolute;
+  top: -20px; right: -20px;
+  font-size: 6rem;
+  opacity: 0.04;
+  line-height: 1;
+}
+
+/* ─── LOGIN ─── */
+#login { background: linear-gradient(160deg, var(--green-dark) 0%, #001F10 100%); }
+#login .section-title { color: white; }
+#login .section-subtitle { color: rgba(255,255,255,0.6); }
+#login .section-label { color: var(--gold-light); }
+.auth-container { display: flex; gap: 40px; margin-top: 50px; align-items: flex-start; flex-wrap: wrap; }
+.auth-panel { flex: 1; min-width: 280px; background: rgba(255,255,255,0.06); border: 1px solid rgba(201,168,76,0.2); border-radius: 20px; padding: 36px; backdrop-filter: blur(10px); }
+.auth-panel-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: white; margin-bottom: 6px; }
+.auth-panel-sub { font-size: 0.9rem; color: rgba(255,255,255,0.5); margin-bottom: 28px; font-weight: 300; }
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; font-family: 'Josefin Sans', sans-serif; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 7px; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 11px 14px; color: white; font-family: 'Crimson Pro', serif; font-size: 1rem; outline: none; transition: border-color 0.3s; -webkit-appearance: none; appearance: none; }
+.form-group input::placeholder { color: rgba(255,255,255,0.3); }
+.form-group input:focus, .form-group select:focus { border-color: var(--gold); }
+.form-group select option { background: var(--green-dark); }
+.tab-switcher { display: flex; background: rgba(255,255,255,0.05); border-radius: 8px; padding: 4px; margin-bottom: 28px; }
+.tab-switch-btn { flex: 1; padding: 8px; border: none; background: transparent; color: rgba(255,255,255,0.5); font-family: 'Josefin Sans', sans-serif; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; border-radius: 6px; transition: all 0.3s; }
+.tab-switch-btn.active { background: var(--gold); color: var(--green-dark); font-weight: 700; }
+.login-form, .register-form { display: none; }
+.login-form.active, .register-form.active { display: block; }
+
+/* DASHBOARD */
+.dashboard-area { display: none; }
+.dashboard-area.open { display: block; }
+.dashboard-header { background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%); border-radius: 16px; padding: 24px 28px; color: white; display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.dashboard-welcome { font-family: 'Playfair Display', serif; font-size: 1.4rem; }
+
+/* DASHBOARD OFFER FLOAT */
+.dash-offer-float {
+  background: linear-gradient(135deg, rgba(201,168,76,0.1) 0%, rgba(0,108,53,0.08) 100%);
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+  animation: offerGlow 3s ease-in-out infinite;
+}
+@keyframes offerGlow {
+  0%,100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.1); }
+  50% { box-shadow: 0 0 20px 4px rgba(201,168,76,0.12); }
+}
+.dash-offer-float::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: conic-gradient(transparent, rgba(201,168,76,0.04), transparent 30%);
+  animation: spinSlow 8s linear infinite;
+}
+@keyframes spinSlow { to { transform: rotate(360deg); } }
+.dash-offer-badge {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: var(--green-dark);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 50px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.dash-offer-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+.dash-offer-text span {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+.dash-offer-sub {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.62rem;
+  color: rgba(255,255,255,0.4);
+  margin-top: 2px;
+}
+
+.dashboard-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.dash-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(201,168,76,0.2); border-radius: 12px; padding: 18px; text-align: center; color: white; }
+.dash-card-icon { font-size: 1.8rem; margin-bottom: 8px; }
+.dash-card-label { font-family: 'Josefin Sans', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 4px; }
+.dash-card-value { font-size: 1.1rem; font-weight: 600; }
+
+/* ─── APPLY ─── */
+#apply { background: linear-gradient(135deg, #F9F6EF 0%, #EDE8DF 100%); }
+.apply-form-container { max-width: 700px; margin: 50px auto 0; background: white; border-radius: 24px; padding: 48px; box-shadow: 0 20px 60px rgba(0,0,0,0.1); border: 1px solid rgba(201,168,76,0.2); }
+.apply-form-container .form-group label { color: var(--green-dark); }
+.apply-form-container .form-group input, .apply-form-container .form-group select { background: #FAFAF8; border-color: rgba(0,108,53,0.2); color: var(--text-dark); }
+.apply-form-container .form-group input::placeholder { color: #BBB; }
+.apply-form-container .form-group input:focus, .apply-form-container .form-group select:focus { border-color: var(--green); }
+.apply-form-container .form-group select option { color: var(--text-dark); }
+.apply-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
+
+/* ─── CONTACT ─── */
+#contact { background: white; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-top: 50px; align-items: center; }
+.contact-info-card { display: flex; flex-direction: column; gap: 20px; }
+.contact-item { display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: linear-gradient(135deg, #FAFAF7 0%, #F4F1EA 100%); border: 1px solid rgba(201,168,76,0.2); border-radius: 14px; transition: all 0.3s; }
+.contact-item:hover { border-color: var(--gold); transform: translateX(4px); }
+.contact-icon { width: 44px; height: 44px; background: var(--green); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+.contact-item-title { font-family: 'Josefin Sans', sans-serif; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 4px; }
+.contact-item-value { font-size: 1rem; color: var(--text-dark); line-height: 1.5; }
+.contact-item-value a { color: var(--green); text-decoration: none; }
+.contact-item-value a:hover { color: var(--gold-dark); }
+.hours-table { width: 100%; border-collapse: collapse; }
+.hours-table tr:not(:last-child) td { border-bottom: 1px solid rgba(0,0,0,0.06); }
+.hours-table td { padding: 6px 0; font-size: 0.92rem; color: var(--text-mid); }
+.hours-table td:last-child { text-align: right; color: var(--green); font-weight: 500; }
+.contact-map-area { background: linear-gradient(135deg, var(--green-dark) 0%, #002518 100%); border-radius: 20px; padding: 40px; text-align: center; color: white; }
+.contact-map-area h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 12px; color: var(--gold-light); }
+.contact-map-area p { font-size: 0.95rem; color: rgba(255,255,255,0.6); margin-bottom: 24px; line-height: 1.6; font-weight: 300; }
+.wa-big-btn { display: block; background: #25D366; color: white; text-decoration: none; font-family: 'Josefin Sans', sans-serif; font-size: 0.85rem; letter-spacing: 0.08em; font-weight: 600; padding: 14px 28px; border-radius: 10px; transition: all 0.3s; margin-bottom: 16px; text-align: center; }
+.wa-big-btn:hover { background: #1ebe59; transform: translateY(-2px); }
+
+/* ─── DEVELOPER ─── */
+#developer { background: linear-gradient(135deg, #1A1A1A 0%, #0D0D0D 100%); }
+#developer .section-title { color: white; }
+#developer .section-subtitle { color: rgba(255,255,255,0.5); }
+#developer .section-label { color: var(--gold); }
+.dev-card { max-width: 500px; margin: 50px auto 0; background: rgba(255,255,255,0.04); border: 1px solid rgba(201,168,76,0.2); border-radius: 24px; padding: 40px; text-align: center; backdrop-filter: blur(10px); }
+.dev-avatar { width: 90px; height: 90px; background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--green-dark); margin: 0 auto 20px; }
+.dev-name { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: white; margin-bottom: 6px; }
+.dev-title { font-family: 'Josefin Sans', sans-serif; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+.dev-links { display: flex; flex-direction: column; gap: 10px; }
+.dev-link { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 12px 18px; color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.92rem; transition: all 0.3s; }
+.dev-link:hover { border-color: var(--gold); color: var(--gold-light); background: rgba(201,168,76,0.08); }
+.dev-link-icon { font-size: 1.2rem; }
+
+/* ─── FOOTER ─── */
+footer { background: #001A0D; padding: 50px 40px 30px; border-top: 2px solid var(--gold-dark); }
+.footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-logo-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: white; margin-bottom: 12px; }
+.footer-tagline { font-size: 0.9rem; color: rgba(255,255,255,0.45); line-height: 1.6; font-weight: 300; max-width: 260px; }
+.footer-col-title { font-family: 'Josefin Sans', sans-serif; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+.footer-links { display: flex; flex-direction: column; gap: 8px; }
+.footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.88rem; transition: color 0.3s; }
+.footer-links a:hover { color: var(--gold-light); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-copy { font-size: 0.82rem; color: rgba(255,255,255,0.3); }
+.footer-flag { font-size: 1.4rem; }
+
+/* ─── CHATBOT ─── */
+.chatbot-toggle { position: fixed; bottom: 28px; right: 28px; width: 58px; height: 58px; background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 8px 30px rgba(0,108,53,0.4); z-index: 9000; border: 2px solid var(--gold); font-size: 1.6rem; transition: all 0.3s; animation: bounce 3s ease infinite; }
+@keyframes bounce { 0%,90%,100% { transform: translateY(0); } 95% { transform: translateY(-6px); } }
+.chatbot-toggle:hover { transform: scale(1.1); animation: none; }
+.chatbot-window { position: fixed; bottom: 100px; right: 28px; width: 340px; background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.18); border: 1px solid rgba(201,168,76,0.25); z-index: 9001; display: none; flex-direction: column; overflow: hidden; max-height: 500px; }
+.chatbot-window.open { display: flex; animation: slideUp 0.3s ease; }
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.chatbot-header { background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%); padding: 16px 20px; display: flex; align-items: center; gap: 12px; }
+.chatbot-avatar { width: 36px; height: 36px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; }
+.chatbot-header-info { flex: 1; }
+.chatbot-name { font-family: 'Josefin Sans', sans-serif; font-size: 0.85rem; font-weight: 700; color: white; letter-spacing: 0.05em; }
+.chatbot-status { font-size: 0.72rem; color: rgba(255,255,255,0.6); }
+.chatbot-close { color: rgba(255,255,255,0.6); cursor: pointer; font-size: 1.2rem; line-height: 1; background: none; border: none; }
+.chatbot-messages { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+.msg { max-width: 85%; padding: 10px 14px; border-radius: 14px; font-size: 0.88rem; line-height: 1.5; }
+.msg-bot { background: #F0F0F0; color: var(--text-dark); border-bottom-left-radius: 4px; align-self: flex-start; }
+.msg-user { background: var(--green); color: white; border-bottom-right-radius: 4px; align-self: flex-end; }
+.chatbot-options { padding: 12px 16px; display: flex; flex-direction: column; gap: 6px; }
+.chatbot-opt-btn { background: transparent; border: 1.5px solid rgba(0,108,53,0.3); color: var(--green); font-family: 'Josefin Sans', sans-serif; font-size: 0.75rem; letter-spacing: 0.05em; padding: 8px 14px; border-radius: 8px; cursor: pointer; text-align: left; transition: all 0.25s; }
+.chatbot-opt-btn:hover { background: var(--green); color: white; }
+.chatbot-input { display: flex; border-top: 1px solid rgba(0,0,0,0.07); padding: 10px; gap: 8px; }
+.chatbot-input input { flex: 1; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; padding: 8px 12px; font-family: 'Crimson Pro', serif; font-size: 0.95rem; outline: none; }
+.chatbot-input input:focus { border-color: var(--green); }
+.chatbot-send { background: var(--green); color: white; border: none; border-radius: 8px; padding: 8px 14px; cursor: pointer; font-size: 1rem; transition: background 0.2s; }
+.chatbot-send:hover { background: var(--green-light); }
+
+/* ─── MODAL ─── */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); z-index: 8000; display: none; align-items: center; justify-content: center; padding: 20px; }
+.modal-overlay.open { display: flex; }
+.modal { background: white; border-radius: 20px; padding: 40px; max-width: 500px; width: 100%; position: relative; box-shadow: 0 30px 80px rgba(0,0,0,0.3); animation: modalIn 0.35s ease; }
+@keyframes modalIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+.modal-close { position: absolute; top: 16px; right: 20px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #999; }
+.modal-title { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--green-dark); margin-bottom: 8px; }
+.modal-sub { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 24px; }
+.modal .form-group label { color: var(--green-dark); }
+.modal .form-group input, .modal .form-group select { background: #FAFAF8; border: 1px solid rgba(0,108,53,0.2); color: var(--text-dark); }
+.modal .form-group input::placeholder { color: #BBB; }
+.modal .form-group input:focus, .modal .form-group select:focus { border-color: var(--green); }
+.modal .form-group select option { color: var(--text-dark); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  header { padding: 0 20px; }
+  nav { display: none; }
+  .hamburger { display: flex; }
+  .top-bar { padding: 8px 20px; font-size: 0.72rem; }
+  section { padding: 60px 20px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .apply-grid { grid-template-columns: 1fr; }
+  .dashboard-cards { grid-template-columns: 1fr; }
+  .auth-container { flex-direction: column; }
+  .stats-bar { gap: 30px; padding: 30px 20px; }
+  .about-story-grid { grid-template-columns: 1fr; }
+  .about-leaders-row { grid-template-columns: 1fr; }
+  .about-commitment-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .hero { padding: 60px 20px; }
+  .hero-courses { flex-direction: column; align-items: center; }
+  .faculty-grid { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; }
+  .apply-form-container { padding: 28px; }
+  .modal { padding: 28px; }
+  .chatbot-window { right: 12px; left: 12px; width: auto; }
+  .about-stats-grid { grid-template-columns: 1fr 1fr; }
+  .about-academy-focus { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="top-bar-item"><span>Head Faculty:</span> Irfan Mushtaq</div>
+  <div style="display:flex;gap:20px;flex-wrap:wrap;">
+    <div class="top-bar-item">✉️ irfanmushtaq960@gmail.com</div>
+    <div class="top-bar-item">📞 0539966023</div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <a href="#home" class="logo-area">
+    <div class="logo-emblem">E</div>
+    <div class="logo-text-area">
+      <span class="logo-name">Expertease Platform</span>
+      <span class="logo-tag">Premium Healthcare Exam Prep · Saudi Arabia</span>
+    </div>
+  </a>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#courses">Courses</a>
+    <a href="#faculty">Faculty</a>
+    <a href="#login">Student Login</a>
+    <a href="#apply" class="nav-cta">Apply Now</a>
+    <a href="#contact">Contact</a>
+    <a href="#developer">Developer</a>
+  </nav>
+  <div class="hamburger" onclick="toggleMobileNav()">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+<div class="mobile-nav" id="mobileNav">
+  <a href="#home" onclick="closeMobileNav()">Home</a>
+  <a href="#about" onclick="closeMobileNav()">About</a>
+  <a href="#courses" onclick="closeMobileNav()">Courses</a>
+  <a href="#faculty" onclick="closeMobileNav()">Faculty</a>
+  <a href="#login" onclick="closeMobileNav()">Student Login</a>
+  <a href="#apply" onclick="closeMobileNav()">Apply Now</a>
+  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+  <a href="#developer" onclick="closeMobileNav()">Developer</a>
+</div>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🇸🇦 Saudi Arabia's Premier Healthcare Consultancy</div>
+    <h1>Your Gateway to<br><em>Healthcare Excellence</em> in Saudi Arabia</h1>
+    <p>Expert-led coaching for Prometric, OET, and IELTS — by licensed professionals with first-hand Saudi healthcare experience.</p>
+    <div class="hero-courses">
+      <a href="#courses" class="course-pill">
+        <span class="course-pill-icon">🏥</span>
+        <span class="course-pill-name">Prometric</span>
+        <span class="course-pill-sub">SCFHS · MOH · DHA</span>
+      </a>
+      <a href="#courses" class="course-pill">
+        <span class="course-pill-icon">🌍</span>
+        <span class="course-pill-name">OET</span>
+        <span class="course-pill-sub">Occupational English Test</span>
+      </a>
+      <a href="#courses" class="course-pill">
+        <span class="course-pill-icon">📚</span>
+        <span class="course-pill-name">IELTS</span>
+        <span class="course-pill-sub">International English</span>
+      </a>
+      <a href="#courses" class="course-pill">
+        <span class="course-pill-icon">🌐</span>
+        <span class="course-pill-name">Int'l Licensing</span>
+        <span class="course-pill-sub">Complete Medical Guidance</span>
+      </a>
+    </div>
+    <a href="#apply" class="hero-cta" onclick="openApplyModal()">Apply Now — Start Your Journey</a>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Students Enrolled</div></div>
+  <div class="stat-item"><div class="stat-num">95%</div><div class="stat-label">Pass Rate</div></div>
+  <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">Expert Faculty</div></div>
+  <div class="stat-item"><div class="stat-num">30+</div><div class="stat-label">Courses Offered</div></div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- ABOUT SECTION -->
+<!-- ═══════════════════════════════════════════ -->
+<section id="about">
+  <div class="about-bg-pattern"></div>
+  <div class="about-orb-1"></div>
+  <div class="about-orb-2"></div>
+
+  <div class="container" style="position:relative;z-index:2;">
+
+    <!-- Header -->
+    <div class="text-center" style="margin-bottom:0;">
+      <div class="section-label" style="color:var(--gold-light);justify-content:center;">Our Story</div>
+      <h2 class="section-title" style="color:white;">About <span style="color:var(--gold);">Expertease</span></h2>
+      <p class="section-subtitle" style="color:rgba(255,255,255,0.52);">Built on trust, driven by results — serving healthcare professionals since 2022.</p>
+    </div>
+
+    <!-- Founding Story + Stats -->
+    <div class="about-story-grid">
+      <div class="about-story-text">
+        <div class="about-founded-tag">Founded 2022 · Kingdom of Saudi Arabia</div>
+        <h3>Where Every Career<br>Milestone Begins</h3>
+        <p>Founded in 2022, Expertease Consultancy was built with a clear mission — to help medical professionals build successful careers in the Kingdom of Saudi Arabia.</p>
+        <p>In just a few years, Expertease has successfully recruited <strong style="color:var(--gold-light);">200+ medical professionals</strong> and supported <strong style="color:var(--gold-light);">5,000+ Dataflow applications</strong>, ensuring smooth and transparent licensing processes.</p>
+        <blockquote>Our journey has always been guided by excellence, integrity, and results.</blockquote>
+      </div>
+      <div class="about-stats-grid">
+        <div class="about-stat-card gold">
+          <div class="about-stat-num">200+</div>
+          <div class="about-stat-desc">Medical Professionals Recruited</div>
+        </div>
+        <div class="about-stat-card green">
+          <div class="about-stat-num">5,000+</div>
+          <div class="about-stat-desc">Dataflow Applications Supported</div>
+        </div>
+        <div class="about-stat-card green">
+          <div class="about-stat-num">5,000+</div>
+          <div class="about-stat-desc">Successful Prometric Cases</div>
+        </div>
+        <div class="about-stat-card gold">
+          <div class="about-stat-num">100+</div>
+          <div class="about-stat-desc">QVP Cases Handled</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Leadership -->
+    <div class="about-leadership">
+      <div class="about-leadership-title">Leadership</div>
+      <div class="about-leaders-row">
+        <div class="about-leader">
+          <div class="about-leader-avatar">AM</div>
+          <div>
+            <div class="about-leader-name">Aijaz Manzoor</div>
+            <div class="about-leader-role">Co-Founder &amp; Director</div>
+          </div>
+        </div>
+        <div class="about-leader">
+          <div class="about-leader-avatar">SM</div>
+          <div>
+            <div class="about-leader-name">Suhail Manzoor</div>
+            <div class="about-leader-role">Co-Founder &amp; Director</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-kashmir-note">
+        Under the leadership of Aijaz Manzoor and Suhail Manzoor, the organization has handled more than 5,000 successful Prometric cases and over 100 QVP cases, proudly achieving <strong>one of the first QVP cases from Kashmir</strong> — a milestone that reflects dedication, expertise, and trust.
+      </div>
+    </div>
+
+    <!-- Expertease Academy 2026 -->
+    <div class="about-academy">
+      <div class="about-academy-orb"></div>
+      <div class="about-academy-badge">✦ New in 2026</div>
+      <h3>Expanding the Vision — <span>Expertease Academy</span></h3>
+      <p>In 2026, we proudly introduced Expertease Academy, an educational platform designed to empower medical professionals across India. Our goal is simple: to prepare healthcare professionals not just to pass exams, but to build global careers with confidence.</p>
+      <div class="about-academy-focus">
+        <div class="academy-focus-item">
+          <span>🏥</span>
+          <span class="academy-focus-label">Prometric Exam Preparation</span>
+        </div>
+        <div class="academy-focus-item">
+          <span>📚</span>
+          <span class="academy-focus-label">IELTS Training</span>
+        </div>
+        <div class="academy-focus-item">
+          <span>🌍</span>
+          <span class="academy-focus-label">OET Coaching</span>
+        </div>
+        <div class="academy-focus-item">
+          <span>🌐</span>
+          <span class="academy-focus-label">Complete Guidance for International Medical Licensing</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Commitment -->
+    <div class="about-commitment-grid">
+      <div class="about-commitment-card plain">
+        <span class="card-icon">🤝</span>
+        <h4>Our Commitment</h4>
+        <p>At Expertease, we believe success is built on trust, transparency, and consistent support. From recruitment and licensing to exam preparation and career placement, we stand beside our candidates at every step of their journey.</p>
+      </div>
+      <div class="about-commitment-card quote-card">
+        <div class="about-crescent">☪️</div>
+        <span class="card-icon">🙏</span>
+        <h4>Our Foundation</h4>
+        <p class="italic">"Every milestone we have achieved is by the grace of Allah and the prayers of our parents. Their support and our clients' trust are the true foundation of our success."</p>
+        <div class="about-quote-divider">
+          <div></div>
+          <span>Aijaz &amp; Suhail Manzoor</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ═══════════════════════════════════════════ -->
+
+<!-- FACULTY -->
+<section id="faculty">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:0;">
+      <div class="section-label">Meet the Experts</div>
+      <h2 class="section-title">Our Distinguished <span>Faculty</span></h2>
+      <p class="section-subtitle">Licensed professionals with real Saudi Arabia healthcare experience, dedicated to your success.</p>
+    </div>
+    <div class="faculty-grid">
+      <div class="faculty-card">
+        <div class="faculty-img-area"><div class="faculty-avatar">ML</div></div>
+        <div class="faculty-body">
+          <div class="faculty-name">Misba Latif</div>
+          <div class="faculty-role">Senior Laboratory Technician · Saudi Arabia</div>
+          <p class="faculty-desc">Experienced Senior Laboratory Technician in Saudi Arabia, licensed by SCFHS. Skilled in laboratory diagnostics and mentoring Medical Laboratory Technologists.</p>
+          <div class="faculty-section">
+            <div class="faculty-section-title">Qualifications</div>
+            <ul class="faculty-qual-list">
+              <li>Bachelor's in Medical Laboratory Technology – University of Kashmir</li>
+              <li>Masters in Medical Microbiology – IKG PTU Punjab (Rank 1)</li>
+              <li>Saudi Commission for Health Specialties Licence</li>
+            </ul>
+          </div>
+          <div class="faculty-section">
+            <div class="faculty-section-title">Specialties</div>
+            <div class="specialty-tags">
+              <span class="specialty-tag">Microbiology</span><span class="specialty-tag">Immunology</span><span class="specialty-tag">Parasitology</span><span class="specialty-tag">Blood Banking</span><span class="specialty-tag">Haematology</span><span class="specialty-tag">Clinical Biochemistry</span><span class="specialty-tag">Histotechnology</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="faculty-card">
+        <div class="faculty-img-area"><div class="faculty-avatar">MM</div></div>
+        <div class="faculty-body">
+          <div class="faculty-name">Mehreena Mushtaq</div>
+          <div class="faculty-role">Nursing Specialist · Emergency · ICU · NICU</div>
+          <p class="faculty-desc">Nursing Specialist in Saudi Arabia with extensive experience across Emergency, ICU, and NICU departments at leading hospitals.</p>
+          <div class="faculty-section">
+            <div class="faculty-section-title">Work Experience</div>
+            <ul class="faculty-qual-list">
+              <li>Welcare Medical Institute</li><li>Max Hospital Mohali</li><li>Indus International Hospital</li><li>Alchemist Hospital</li>
+            </ul>
+          </div>
+          <div class="faculty-section">
+            <div class="faculty-section-title">Qualifications</div>
+            <ul class="faculty-qual-list">
+              <li>BSc Nursing</li><li>Prometric Cleared – 668 Marks</li>
+            </ul>
+          </div>
+          <div class="faculty-section">
+            <div class="faculty-section-title">Specialties</div>
+            <div class="specialty-tags">
+              <span class="specialty-tag">Pediatrics</span><span class="specialty-tag">Pharmacology</span><span class="specialty-tag">Medical-Surgical Nursing</span><span class="specialty-tag">OBG</span><span class="specialty-tag">Prometric Coaching</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="faculty-card">
+        <div class="faculty-img-area"><div class="faculty-avatar">IM</div></div>
+        <div class="faculty-body">
+          <div class="faculty-name">Irfan Mushtaq</div>
+          <div class="faculty-role">NP · Johns Hopkins Aramco Healthcare, Saudi Arabia</div>
+          <p class="faculty-desc">Nurse Practitioner at Johns Hopkins Aramco Healthcare, Saudi Arabia. Certified in BLS & ACLS. OET/IELTS Grade B achiever and exam coach.</p>
+          <div class="faculty-section">
+            <div class="faculty-section-title">Qualifications</div>
+            <ul class="faculty-qual-list">
+              <li>M.Sc NPCC – SGT University</li><li>B.Sc Nursing – MMDU</li>
+            </ul>
+          </div>
+          <div class="faculty-section">
+            <div class="faculty-section-title">Credentials</div>
+            <ul class="faculty-qual-list">
+              <li>RN, RM, NP</li><li>AHA Certified BLS & ACLS</li><li>OET & IELTS Grade B</li>
+            </ul>
+          </div>
+          <div class="faculty-section">
+            <div class="faculty-section-title">Coaching Specialties</div>
+            <div class="specialty-tags">
+              <span class="specialty-tag">OET</span><span class="specialty-tag">IELTS</span><span class="specialty-tag">CBT UK/NZ</span><span class="specialty-tag">Prometric SNLE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section id="courses">
+  <div class="container">
+    <div class="text-center">
+      <div class="section-label">Academic Programs</div>
+      <h2 class="section-title">Explore Our <span>Courses</span></h2>
+      <p class="section-subtitle">Comprehensive Allied Health Science programs from Bachelor's to Master's level — your career starts here.</p>
+    </div>
+    <div class="courses-tabs">
+      <button class="course-tab active" onclick="switchCourseTab(this,'bachelor')">🎓 Bachelor's Programs (14)</button>
+      <button class="course-tab" onclick="switchCourseTab(this,'diploma')">📋 Diploma Programs (11)</button>
+      <button class="course-tab" onclick="switchCourseTab(this,'masters')">🏆 Master's Programs (3)</button>
+    </div>
+    <div id="bachelor" class="courses-group active"><div class="courses-grid" id="bachelorGrid"></div></div>
+    <div id="diploma" class="courses-group"><div class="courses-grid" id="diplomaGrid"></div></div>
+    <div id="masters" class="courses-group"><div class="courses-grid" id="mastersGrid"></div></div>
+  </div>
+</section>
+
+<!-- STUDENT LOGIN -->
+<section id="login">
+  <div class="container">
+    <div class="text-center">
+      <div class="section-label">Student Portal</div>
+      <h2 class="section-title" style="color:white;">Student <span style="color:var(--gold-light)">Login &amp; Registration</span></h2>
+      <p class="section-subtitle">Access your personalized dashboard, track your courses, and stay connected with your faculty.</p>
+    </div>
+    <div class="auth-container">
+      <div class="auth-panel" style="flex:1.2;">
+        <div class="tab-switcher">
+          <button class="tab-switch-btn active" onclick="switchAuthTab(this,'login-form')">Login</button>
+          <button class="tab-switch-btn" onclick="switchAuthTab(this,'register-form')">Register</button>
+        </div>
+        <div class="login-form active" id="login-form">
+          <div class="auth-panel-title">Welcome Back</div>
+          <div class="auth-panel-sub">Sign in to access your dashboard</div>
+          <div class="form-group"><label>Email Address</label><input type="email" id="loginEmail" placeholder="your@email.com"></div>
+          <div class="form-group"><label>Password</label><input type="password" id="loginPwd" placeholder="Enter password"></div>
+          <button class="btn btn-gold" style="width:100%;padding:13px;" onclick="doLogin()">Sign In</button>
+        </div>
+        <div class="register-form" id="register-form">
+          <div class="auth-panel-title">Create Account</div>
+          <div class="auth-panel-sub">Register to start your journey</div>
+          <div class="form-group"><label>Full Name</label><input type="text" id="regName" placeholder="Your full name"></div>
+          <div class="form-group"><label>Email Address</label><input type="email" id="regEmail" placeholder="your@email.com"></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" id="regPhone" placeholder="+91 XXXXX XXXXX"></div>
+          <div class="form-group"><label>Select Course</label><select id="regCourse"><option value="">Choose a course...</option></select></div>
+          <div class="form-group"><label>Password</label><input type="password" id="regPwd" placeholder="Create a strong password"></div>
+          <button class="btn btn-gold" style="width:100%;padding:13px;" onclick="doRegister()">Create Account</button>
+        </div>
+      </div>
+      <!-- Dashboard -->
+      <div class="auth-panel dashboard-area" id="dashboardArea" style="flex:1.5;">
+        <div class="dashboard-header">
+          <div>
+            <div class="dashboard-welcome">Welcome, <span id="dashName">Student</span>! 👋</div>
+            <div style="font-size:0.85rem;opacity:0.6;margin-top:4px;">Here's your overview</div>
+          </div>
+          <button class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,0.4);font-size:0.7rem;" onclick="doLogout()">Logout</button>
+        </div>
+        <!-- Floating Offer Card -->
+        <div class="dash-offer-float">
+          <div style="position:relative;z-index:1;">
+            <div class="dash-offer-text">🎓 Special Launch Offer — All Courses <span>₹9,999</span></div>
+            <div class="dash-offer-sub">Limited time · Enroll today and save</div>
+          </div>
+          <div class="dash-offer-badge">🔥 Live Offer</div>
+        </div>
+        <div class="dashboard-cards">
+          <div class="dash-card"><div class="dash-card-icon">📚</div><div class="dash-card-label">Enrolled Course</div><div class="dash-card-value" id="dashCourse">—</div></div>
+          <div class="dash-card"><div class="dash-card-icon">✅</div><div class="dash-card-label">Status</div><div class="dash-card-value" style="color:var(--gold-light);">Active</div></div>
+          <div class="dash-card"><div class="dash-card-icon">📞</div><div class="dash-card-label">Support</div><div class="dash-card-value" style="font-size:0.8rem;">WhatsApp Available</div></div>
+        </div>
+        <div style="margin-top:20px;padding:16px;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);border-radius:10px;">
+          <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;line-height:1.6;">📌 Your faculty will reach out within 24 hours of enrollment. For immediate assistance, contact your faculty directly via WhatsApp.</p>
+        </div>
+        <a href="https://wa.me/7889371630?text=Hello%20Expertease%2C%20I%20have%20applied.%20Please%20share%20payment%20and%20enrollment%20details." target="_blank" style="display:block;margin-top:14px;background:#25D366;color:white;text-align:center;text-decoration:none;font-family:'Josefin Sans',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:12px;border-radius:9px;transition:all 0.3s;">💬 Contact for Payment Details</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section id="apply">
+  <div class="container">
+    <div class="text-center">
+      <div class="section-label">Start Your Journey</div>
+      <h2 class="section-title">Apply <span>Now</span></h2>
+      <p class="section-subtitle">Fill in your details and take the first step toward your healthcare career in Saudi Arabia.</p>
+    </div>
+    <div class="apply-form-container">
+      <div class="apply-grid">
+        <div class="form-group"><label>Full Name *</label><input type="text" id="applyName" placeholder="Your full name"></div>
+        <div class="form-group"><label>Phone Number *</label><input type="tel" id="applyPhone" placeholder="+91 XXXXX XXXXX"></div>
+        <div class="form-group"><label>Region / State *</label><input type="text" id="applyRegion" placeholder="e.g. Jammu & Kashmir"></div>
+        <div class="form-group"><label>Aadhaar Number *</label><input type="text" id="applyAadhaar" placeholder="XXXX XXXX XXXX"></div>
+        <div class="form-group" style="grid-column:span 2"><label>Email ID *</label><input type="email" id="applyEmail" placeholder="your@email.com"></div>
+        <div class="form-group" style="grid-column:span 2">
+          <label>Selected Course *</label>
+          <select id="applyCourse" style="background:#FAFAF8;border:1px solid rgba(0,108,53,0.2);color:var(--text-dark);padding:11px 14px;border-radius:8px;width:100%;font-family:'Crimson Pro',serif;font-size:1rem;outline:none;-webkit-appearance:none;">
+            <option value="">Choose your course...</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn btn-gold" style="width:100%;padding:15px;font-size:0.85rem;margin-top:8px;" onclick="submitApplication()">Submit Application →</button>
+      <p style="text-align:center;font-size:0.82rem;color:#999;margin-top:12px;">After submission, our team will contact you on WhatsApp to complete payment and enrollment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label">Get in Touch</div>
+    <h2 class="section-title">Contact <span>Us</span></h2>
+    <p class="section-subtitle">We're here to answer your questions and guide you through the enrollment process.</p>
+    <div class="contact-grid">
+      <div class="contact-info-card">
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-item-title">Email</div>
+            <div class="contact-item-value"><a href="mailto:experteaseconsultancyofficial@gmail.com">experteaseconsultancyofficial@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-item-title">Phone / WhatsApp</div>
+            <div class="contact-item-value"><a href="tel:7889371630">+91 7889371630</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <div class="contact-item-title">Office Hours</div>
+            <div class="contact-item-value">
+              <table class="hours-table">
+                <tr><td>Monday – Friday</td><td>09:00 am – 05:00 pm</td></tr>
+                <tr><td>Saturday</td><td>Closed</td></tr>
+                <tr><td>Sunday</td><td>Closed</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-map-area">
+        <h3>Connect With Us</h3>
+        <p>Send us a message on WhatsApp for the fastest response. Our team will guide you through enrollment and payment.</p>
+        <a href="https://wa.me/7889371630?text=Hello%2C%20I%20am%20interested%20in%20enrolling%20at%20Expertease%20Platform.%20Please%20guide%20me." target="_blank" class="wa-big-btn">💬 Message on WhatsApp</a>
+        <div style="margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);">
+          <p style="color:rgba(255,255,255,0.4);font-size:0.8rem;line-height:1.5;">After applying, our team will contact you for payment details.<br><strong style="color:var(--gold-light);">experteaseconsultancyofficial@gmail.com</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEVELOPER -->
+<section id="developer">
+  <div class="container text-center">
+    <div class="section-label">Credits</div>
+    <h2 class="section-title">Developer <span style="color:var(--gold)">Profile</span></h2>
+    <p class="section-subtitle">This platform was designed and developed with care for the Expertease Team.</p>
+    <div class="dev-card">
+      <div class="dev-avatar">ZA</div>
+      <div class="dev-name">Zahik Abas Dar</div>
+      <div class="dev-title">Full-Stack Web Developer &amp; UI/UX Designer</div>
+      <div class="dev-links">
+        <a href="https://www.linkedin.com/in/zahik-abas-2646572a4" target="_blank" class="dev-link"><span class="dev-link-icon">💼</span><span>linkedin.com/in/zahik-abas-2646572a4</span></a>
+        <a href="mailto:zahikabas.btec@gmail.com" class="dev-link"><span class="dev-link-icon">✉️</span><span>zahikabas.btec@gmail.com</span></a>
+        <a href="tel:9149793081" class="dev-link"><span class="dev-link-icon">📞</span><span>9149793081</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo-name">Expertease Platform</div>
+        <div class="footer-tagline">Saudi Arabia's premier consultancy for healthcare exam preparation — Prometric, OET, and IELTS coaching by licensed professionals.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <div class="footer-links">
+          <a href="#home">Home</a><a href="#about">About</a><a href="#faculty">Faculty</a><a href="#courses">Courses</a><a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Courses</div>
+        <div class="footer-links">
+          <a href="#courses">Prometric</a><a href="#courses">OET</a><a href="#courses">IELTS</a><a href="#courses">B.Sc. Programs</a><a href="#courses">Diploma Programs</a><a href="#courses">M.Sc. Programs</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-links">
+          <a href="mailto:experteaseconsultancyofficial@gmail.com">experteaseconsultancyofficial@gmail.com</a>
+          <a href="tel:7889371630">+91 7889371630</a>
+          <a href="https://wa.me/7889371630" target="_blank">💬 WhatsApp Us</a>
+          <a href="#developer">Developer</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 Expertease Platform. All rights reserved. Developed by Zahik Abas Dar.</div>
+      <div class="footer-flag">🇸🇦</div>
+    </div>
+  </div>
+</footer>
+
+<!-- CHATBOT -->
+<div class="chatbot-toggle" onclick="toggleChatbot()" title="Chat with us">🤖</div>
+<div class="chatbot-window" id="chatbotWindow">
+  <div class="chatbot-header">
+    <div class="chatbot-avatar">🎓</div>
+    <div class="chatbot-header-info">
+      <div class="chatbot-name">Expertease Assistant</div>
+      <div class="chatbot-status">Online · Typically replies instantly</div>
+    </div>
+    <button class="chatbot-close" onclick="toggleChatbot()">✕</button>
+  </div>
+  <div class="chatbot-messages" id="chatMessages">
+    <div class="msg msg-bot">👋 Hello! I'm the Expertease Assistant. How can I help you today?</div>
+  </div>
+  <div class="chatbot-options" id="chatOptions">
+    <button class="chatbot-opt-btn" onclick="chatReply('apply')">📋 How do I apply?</button>
+    <button class="chatbot-opt-btn" onclick="chatReply('courses')">📚 Tell me about courses</button>
+    <button class="chatbot-opt-btn" onclick="chatReply('payment')">💳 Payment process</button>
+    <button class="chatbot-opt-btn" onclick="chatReply('about')">🏢 About Expertease</button>
+  </div>
+  <div class="chatbot-input">
+    <input type="text" id="chatInput" placeholder="Type your message..." onkeydown="if(event.key==='Enter')sendChatMsg()">
+    <button class="chatbot-send" onclick="sendChatMsg()">➤</button>
+  </div>
+</div>
+
+<!-- APPLY MODAL -->
+<div class="modal-overlay" id="applyModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('applyModal')">✕</button>
+    <div class="modal-title">Apply Now</div>
+    <div class="modal-sub">Fill in the details to send your application.</div>
+    <div class="form-group"><label>Full Name</label><input type="text" id="modalName" placeholder="Your full name"></div>
+    <div class="form-group"><label>Phone Number</label><input type="tel" id="modalPhone" placeholder="+91 XXXXX XXXXX"></div>
+    <div class="form-group"><label>Email ID</label><input type="email" id="modalEmail" placeholder="your@email.com"></div>
+    <div class="form-group">
+      <label>Selected Course</label>
+      <select id="modalCourse" style="background:#FAFAF8;border:1px solid rgba(0,108,53,0.2);color:var(--text-dark);padding:11px 14px;border-radius:8px;width:100%;font-family:'Crimson Pro',serif;font-size:1rem;outline:none;-webkit-appearance:none;">
+        <option value="">Choose your course...</option>
+      </select>
+    </div>
+    <button class="btn btn-gold" style="width:100%;padding:14px;margin-top:4px;" onclick="submitModalApplication()">Submit &amp; Contact via WhatsApp</button>
+  </div>
+</div>
+
+<script>
+// ─── COURSE DATA ───────────────────────────────────────────────────────────────
+const bachelorCourses = [
+  ["B.Sc. Medical Laboratory Technology (BMLT)", "Comprehensive training in lab diagnostics, microbiology, and clinical biochemistry."],
+  ["B.Sc. Radiology & Imaging Technology", "Training in diagnostic imaging, X-ray, CT, and MRI operations."],
+  ["B.Sc. Operation Theatre (OT) Technology", "Specialization in surgical assistance, sterilization, and OT management."],
+  ["B.Sc. Dialysis Technology", "Expertise in renal replacement therapy and dialysis machine operation."],
+  ["Bachelor of Physiotherapy (BPT)", "Holistic physiotherapy education covering musculoskeletal and neurological rehab."],
+  ["B.Sc. Optometry (B.Optom)", "Eye care science including refraction, contact lenses, and low vision rehabilitation."],
+  ["B.Sc. Cardiac/Cardiovascular Technology", "Cardiovascular diagnostics, ECG, echocardiography and cardiac catheterization."],
+  ["B.Sc. Respiratory Therapy Technology", "Pulmonary function, mechanical ventilation, and respiratory care."],
+  ["B.Sc. Physician Assistant", "Clinical support in medical diagnosis, treatment planning and patient care."],
+  ["B.Sc. Anaesthesia Technology", "Perioperative care, anaesthesia machine management and patient monitoring."],
+  ["B.Sc. Critical Care Technology", "ICU management, life-support systems and critical patient monitoring."],
+  ["B.Sc. Neuro Electrophysiology", "EEG, EMG, and neurological diagnostic techniques."],
+  ["B.Sc. Audiology and Speech Therapy", "Hearing assessment, audiometric testing and speech rehabilitation."],
+  ["B.Sc. Nuclear Medicine Technology", "Radioactive isotope handling, PET/SPECT scanning and nuclear therapy."],
+];
+const diplomaCourses = [
+  ["Diploma in Medical Laboratory Technology (DMLT)", "Entry-level lab training covering major diagnostic disciplines."],
+  ["Diploma in Operation Theatre Technology (DOTT)", "OT assistance, sterilization protocols and surgical support."],
+  ["Diploma in X-Ray/Radiology Technician", "Radiographic imaging, patient positioning and radiation safety."],
+  ["Diploma in Dialysis Technician", "Dialysis machine operation and renal patient management."],
+  ["Diploma in Cardiac Care/Cath Lab Technician", "Cardiac monitoring, catheterization lab procedures and ECG."],
+  ["Diploma in Emergency and Trauma Care", "Emergency triage, trauma management and first-response protocols."],
+  ["Diploma in Optometry/Ophthalmic Assistant", "Basic eye examination, optical dispensing and visual screening."],
+  ["Diploma in CT Scan/MRI Technician", "Cross-sectional imaging techniques and MRI safety protocols."],
+  ["Diploma in Physiotherapy", "Fundamental physiotherapy techniques and patient rehabilitation."],
+  ["Diploma in ICU Techniques", "Intensive care procedures, ventilator management and monitoring."],
+  ["Diploma in Sanitary Inspector", "Public health, environmental sanitation and hygiene inspection."],
+];
+const mastersCourses = [
+  ["M.Sc. in Medical Lab Technology (MLT)", "Advanced research and clinical laboratory science at postgraduate level."],
+  ["Master of Physiotherapy (MPT)", "Specialization in advanced physiotherapy and rehabilitation sciences."],
+  ["M.Sc. in Radiology/Imaging", "Postgraduate imaging sciences, research and advanced diagnostic skills."],
+];
+const allCourses = [...bachelorCourses, ...diplomaCourses, ...mastersCourses].map(c => c[0]);
+
+// ─── RENDER COURSES ────────────────────────────────────────────────────────────
+function renderCourseGrid(containerId, courses) {
+  const el = document.getElementById(containerId);
+  el.innerHTML = courses.map(([title, desc], i) => `
+    <div class="course-card">
+      <div class="course-card-number">${String(i+1).padStart(2,'0')}</div>
+      <div class="course-card-title">${title}</div>
+      <div class="course-card-desc">${desc}</div>
+      <div class="course-price-row">
+        <span class="price-old">₹10,000</span>
+        <span class="price-new">₹9,999</span>
+        <span class="price-badge">🎓 Launch Offer</span>
+      </div>
+      <button class="btn btn-gold" onclick="openApplyModalWithCourse('${title.replace(/'/g,"\\'")}')">Apply Now</button>
+    </div>
+  `).join('');
+}
+
+function populateCourseDropdowns() {
+  ['regCourse','applyCourse','modalCourse'].forEach(id => {
+    const sel = document.getElementById(id);
+    if (!sel) return;
+    allCourses.forEach(c => {
+      const opt = document.createElement('option');
+      opt.value = c; opt.textContent = c;
+      sel.appendChild(opt);
+    });
+  });
+}
+
+// ─── TABS ──────────────────────────────────────────────────────────────────────
+function switchCourseTab(btn, groupId) {
+  document.querySelectorAll('.course-tab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.courses-group').forEach(g => g.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(groupId).classList.add('active');
+}
+function switchAuthTab(btn, formId) {
+  document.querySelectorAll('.tab-switch-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.login-form, .register-form').forEach(f => f.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(formId).classList.add('active');
+}
+
+// ─── AUTH ──────────────────────────────────────────────────────────────────────
+let currentUser = null;
+function doLogin() {
+  const email = document.getElementById('loginEmail').value;
+  const pwd = document.getElementById('loginPwd').value;
+  if (!email || !pwd) return alert('Please enter email and password.');
+  const stored = localStorage.getItem('ep_user_' + email);
+  if (!stored) return alert('No account found. Please register first.');
+  const user = JSON.parse(stored);
+  if (user.password !== pwd) return alert('Incorrect password.');
+  currentUser = user;
+  showDashboard(user);
+}
+function doRegister() {
+  const name = document.getElementById('regName').value.trim();
+  const email = document.getElementById('regEmail').value.trim();
+  const phone = document.getElementById('regPhone').value.trim();
+  const course = document.getElementById('regCourse').value;
+  const pwd = document.getElementById('regPwd').value;
+  if (!name||!email||!phone||!course||!pwd) return alert('Please fill all fields.');
+  const user = { name, email, phone, course, password: pwd };
+  localStorage.setItem('ep_user_' + email, JSON.stringify(user));
+  currentUser = user;
+  alert('Account created successfully!');
+  showDashboard(user);
+}
+function showDashboard(user) {
+  document.getElementById('dashboardArea').classList.add('open');
+  document.getElementById('dashName').textContent = user.name;
+  document.getElementById('dashCourse').textContent = user.course || '—';
+}
+function doLogout() {
+  currentUser = null;
+  document.getElementById('dashboardArea').classList.remove('open');
+}
+
+// ─── APPLY ─────────────────────────────────────────────────────────────────────
+function openApplyModal() { document.getElementById('applyModal').classList.add('open'); }
+function openApplyModalWithCourse(course) {
+  document.getElementById('applyModal').classList.add('open');
+  setTimeout(() => document.getElementById('modalCourse').value = course, 50);
+}
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+
+function buildWAMessage(name, phone, course) {
+  return encodeURIComponent(`Hello Expertease Platform,\n\nI'd like to apply for:\n*Course:* ${course}\n*Name:* ${name}\n*Phone:* ${phone}\n\nPlease guide me regarding payment and enrollment.`);
+}
+function submitModalApplication() {
+  const name = document.getElementById('modalName').value.trim();
+  const phone = document.getElementById('modalPhone').value.trim();
+  const email = document.getElementById('modalEmail').value.trim();
+  const course = document.getElementById('modalCourse').value;
+  if (!name||!phone||!email||!course) return alert('Please fill all fields.');
+  closeModal('applyModal');
+  window.open(`https://wa.me/7889371630?text=${buildWAMessage(name, phone, course)}`, '_blank');
+}
+function submitApplication() {
+  const name = document.getElementById('applyName').value.trim();
+  const phone = document.getElementById('applyPhone').value.trim();
+  const region = document.getElementById('applyRegion').value.trim();
+  const aadhaar = document.getElementById('applyAadhaar').value.trim();
+  const email = document.getElementById('applyEmail').value.trim();
+  const course = document.getElementById('applyCourse').value;
+  if (!name||!phone||!region||!aadhaar||!email||!course) return alert('Please fill all required fields.');
+  const msg = encodeURIComponent(`Hello Expertease Platform,\n\nNew Application:\n*Name:* ${name}\n*Phone:* ${phone}\n*Region:* ${region}\n*Aadhaar:* ${aadhaar}\n*Email:* ${email}\n*Course:* ${course}\n\nKindly process my enrollment.`);
+  window.open(`https://wa.me/7889371630?text=${msg}`, '_blank');
+}
+
+// ─── MOBILE NAV ────────────────────────────────────────────────────────────────
+function toggleMobileNav() { document.getElementById('mobileNav').classList.toggle('open'); }
+function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); }
+
+// ─── CHATBOT ───────────────────────────────────────────────────────────────────
+const chatResponses = {
+  apply: {
+    user: "How do I apply?",
+    bot: "Applying is easy! 1️⃣ Visit the Apply section above. 2️⃣ Fill in your details. 3️⃣ Submit the form — you'll be connected to WhatsApp. 4️⃣ Our team will guide you through payment and enrollment!"
+  },
+  courses: {
+    user: "Tell me about courses",
+    bot: "We offer 29 programs! 🎓 14 Bachelor's (BMLT, Radiology, OT, BPT, Cardiac, etc.) · 📋 11 Diplomas (DMLT, X-Ray, ICU, etc.) · 🏆 3 Master's (MLT, MPT, Radiology). All courses at ₹9,999 — scroll to Courses to see all!"
+  },
+  payment: {
+    user: "Payment process",
+    bot: "💳 After submitting your application, our team will contact you on WhatsApp (+91 7889371630) with payment details. Send your payment screenshot to confirm enrollment. Simple & secure! ✅"
+  },
+  about: {
+    user: "About Expertease",
+    bot: "Founded in 2022, Expertease has recruited 200+ professionals, handled 5,000+ Prometric cases & 5,000+ Dataflow apps. In 2026 we launched Expertease Academy! 🏥 Scroll to the About section to read our full story."
+  }
+};
+function toggleChatbot() { document.getElementById('chatbotWindow').classList.toggle('open'); }
+function chatReply(key) {
+  const r = chatResponses[key];
+  addMsg('user', r.user);
+  setTimeout(() => addMsg('bot', r.bot), 500);
+  document.getElementById('chatOptions').style.display = 'none';
+  setTimeout(() => { document.getElementById('chatOptions').style.display = 'flex'; }, 3000);
+}
+function addMsg(type, text) {
+  const msgs = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = `msg msg-${type}`;
+  div.innerHTML = text;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+function sendChatMsg() {
+  const inp = document.getElementById('chatInput');
+  const text = inp.value.trim();
+  if (!text) return;
+  addMsg('user', text);
+  inp.value = '';
+  const lower = text.toLowerCase();
+  setTimeout(() => {
+    if (lower.includes('apply') || lower.includes('enroll')) chatReply('apply');
+    else if (lower.includes('course') || lower.includes('program')) chatReply('courses');
+    else if (lower.includes('pay') || lower.includes('fee')) chatReply('payment');
+    else if (lower.includes('about') || lower.includes('history') || lower.includes('found')) chatReply('about');
+    else addMsg('bot', 'I can help with applying, courses, payment, or learning about us. Select an option below! 😊');
+  }, 600);
+}
+
+// ─── INIT ──────────────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  renderCourseGrid('bachelorGrid', bachelorCourses);
+  renderCourseGrid('diplomaGrid', diplomaCourses);
+  renderCourseGrid('mastersGrid', mastersCourses);
+  populateCourseDropdowns();
+});
+document.getElementById('applyModal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal('applyModal');
+});
+</script>
+</body>
+</html>
