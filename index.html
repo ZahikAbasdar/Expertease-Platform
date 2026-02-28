@@ -76,6 +76,10 @@ nav a.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 15px rgba(2
 .course-pill-sub { font-family: 'Josefin Sans', sans-serif; font-size: 0.68rem; letter-spacing: 0.1em; color: var(--gold-light); display: block; margin-top: 2px; }
 .hero-cta { display: inline-block; background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%); color: var(--green-dark); text-decoration: none; font-family: 'Josefin Sans', sans-serif; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 16px 44px; border-radius: 8px; border: none; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 8px 30px rgba(201,168,76,0.35); }
 .hero-cta:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(201,168,76,0.5); }
+ 60%,100%{transform:translateX(200%)} }
+@keyframes goldText { 0%{background-position:0% 50%} 100%{background-position:200% 50%} }
+@keyframes trophyPulse { 0%,100%{transform:scale(1);box-shadow:0 0 18px rgba(201,168,76,0.7)} 50%{transform:scale(1.12);box-shadow:0 0 32px rgba(201,168,76,1)} }
+@keyframes badgePop { 0%,100%{transform:scale(1)} 50%{transform:scale(1.08)} }
 
 /* ─── SECTIONS ─── */
 section { padding: 90px 40px; }
@@ -515,21 +519,11 @@ section { padding: 90px 40px; }
   gap: 12px;
   position: relative;
   overflow: hidden;
-  animation: offerGlow 3s ease-in-out infinite;
 }
-@keyframes offerGlow {
-  0%,100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.1); }
+
   50% { box-shadow: 0 0 20px 4px rgba(201,168,76,0.12); }
 }
-.dash-offer-float::before {
-  content: '';
-  position: absolute;
-  top: -50%; left: -50%;
-  width: 200%; height: 200%;
-  background: conic-gradient(transparent, rgba(201,168,76,0.04), transparent 30%);
-  animation: spinSlow 8s linear infinite;
-}
-@keyframes spinSlow { to { transform: rotate(360deg); } }
+
 .dash-offer-badge {
   background: linear-gradient(135deg, var(--gold-dark), var(--gold));
   color: var(--green-dark);
@@ -670,6 +664,130 @@ footer { background: #001A0D; padding: 50px 40px 30px; border-top: 2px solid var
 .modal .form-group select option { color: var(--text-dark); }
 
 /* ─── RESPONSIVE ─── */
+/* ════════════════════════════════════════
+   PREMIUM FINISH — GLOBAL ENHANCEMENTS
+════════════════════════════════════════ */
+
+/* Scroll reveal */
+.reveal { opacity: 0; transform: translateY(36px); transition: opacity 0.75s cubic-bezier(.16,1,.3,1), transform 0.75s cubic-bezier(.16,1,.3,1); }
+.reveal.revealed { opacity: 1; transform: none; }
+.reveal-left { opacity: 0; transform: translateX(-36px); transition: opacity 0.75s cubic-bezier(.16,1,.3,1), transform 0.75s cubic-bezier(.16,1,.3,1); }
+.reveal-left.revealed { opacity: 1; transform: none; }
+.reveal-right { opacity: 0; transform: translateX(36px); transition: opacity 0.75s cubic-bezier(.16,1,.3,1), transform 0.75s cubic-bezier(.16,1,.3,1); }
+.reveal-right.revealed { opacity: 1; transform: none; }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Header scroll shrink */
+header.scrolled { padding-top: 0; padding-bottom: 0; box-shadow: 0 6px 40px rgba(0,0,0,0.55); }
+header.scrolled .logo-emblem { width: 42px; height: 42px; font-size: 1.3rem; transition: all 0.3s; }
+header { transition: box-shadow 0.3s, background 0.3s; }
+
+/* Gold section dividers */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--gold-dark) 20%, var(--gold-light) 50%, var(--gold-dark) 80%, transparent 100%);
+  margin: 0;
+  opacity: 0.5;
+}
+
+
+  10% { opacity: 0.6; transform: translateY(-20px) scale(1); }
+  90% { opacity: 0.2; transform: translateY(-180px) scale(0.4); }
+  100% { opacity: 0; transform: translateY(-200px) scale(0); }
+}
+
+/* Premium stats counter animation */
+@keyframes countUp { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:none; } }
+.stat-num { animation: countUp 0.8s ease both; }
+
+/* Section title underline accent */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));
+  border-radius: 2px;
+  margin: 12px auto 0;
+}
+.text-center .section-title::after { margin: 12px auto 0; }
+.section-title::after { margin: 12px 0 0; }
+
+/* Faculty card premium upgrade */
+.faculty-card { transition: transform 0.4s cubic-bezier(.16,1,.3,1), box-shadow 0.4s ease, border-color 0.4s ease; }
+.faculty-card:hover { transform: translateY(-10px) scale(1.012); }
+
+/* Course card premium */
+.course-card { transition: transform 0.35s cubic-bezier(.16,1,.3,1), box-shadow 0.35s ease, border-color 0.35s ease; }
+
+/* Buttons premium */
+.btn-gold { background-size: 200% 100%; background-image: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 40%, var(--gold) 100%); transition: all 0.4s ease; }
+.btn-gold:hover { background-position: 100% 0; transform: translateY(-3px); box-shadow: 0 10px 28px rgba(201,168,76,0.5); }
+
+/* Nav premium active dot */
+nav a.active-nav { color: var(--gold-light) !important; }
+
+/* About stat cards hover */
+.about-stat-card { transition: transform 0.3s cubic-bezier(.16,1,.3,1), box-shadow 0.3s ease; }
+.about-stat-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+
+/* Contact items */
+.contact-item { transition: all 0.3s cubic-bezier(.16,1,.3,1); }
+.contact-item:hover { transform: translateX(6px) translateY(-2px); box-shadow: 4px 4px 20px rgba(201,168,76,0.12); }
+
+/* Footer premium border glow */
+footer { position: relative; }
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 10%; right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold-dark), var(--gold-light), var(--gold-dark), transparent);
+}
+
+/* Chatbot premium */
+.chatbot-toggle { transition: transform 0.3s cubic-bezier(.16,1,.3,1), box-shadow 0.3s; }
+.chatbot-toggle:hover { box-shadow: 0 14px 40px rgba(0,108,53,0.6), 0 0 0 3px rgba(201,168,76,0.3); }
+
+/* Modal premium */
+.modal { border-top: 3px solid var(--gold); }
+
+/* Premium scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--gold-dark), var(--gold-light)); border-radius: 4px; }
+
+/* Hero CTA premium pulse */
+@keyframes ctaPulse {
+  0%,100% { box-shadow: 0 8px 30px rgba(201,168,76,0.35); }
+  50% { box-shadow: 0 8px 50px rgba(201,168,76,0.65), 0 0 0 6px rgba(201,168,76,0.1); }
+}
+.hero-cta { animation: ctaPulse 2.5s ease-in-out infinite; }
+.hero-cta:hover { animation: none; }
+
+/* Stats bar premium divider lines */
+.stat-item { position: relative; }
+.stat-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -30px;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(201,168,76,0.3), transparent);
+}
+
+/* Course tab premium */
+.course-tab { transition: all 0.3s cubic-bezier(.16,1,.3,1); }
+.course-tab.active { box-shadow: 0 4px 20px rgba(0,108,53,0.3); transform: translateY(-2px); }
+
+/* Input focus premium glow */
+.form-group input:focus, .form-group select:focus {
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+}
+
 @media (max-width: 900px) {
   header { padding: 0 20px; }
   nav { display: none; }
@@ -701,14 +819,7 @@ footer { background: #001A0D; padding: 50px 40px 30px; border-top: 2px solid var
 </head>
 <body>
 
-<!-- TOP BAR -->
-<div class="top-bar">
-  <div class="top-bar-item"><span>Head Faculty:</span> Irfan Mushtaq</div>
-  <div style="display:flex;gap:20px;flex-wrap:wrap;">
-    <div class="top-bar-item">✉️ irfanmushtaq960@gmail.com</div>
-    <div class="top-bar-item">📞 0539966023</div>
-  </div>
-</div>
+
 
 <!-- HEADER -->
 <header>
@@ -767,16 +878,66 @@ footer { background: #001A0D; padding: 50px 40px 30px; border-top: 2px solid var
         <span class="course-pill-name">IELTS</span>
         <span class="course-pill-sub">International English</span>
       </a>
-      <a href="#courses" class="course-pill">
+      <a href="https://wa.me/917889371630?text=Hello%20Expertease%2C%20I%20need%20complete%20guidance%20for%20international%20medical%20licensing.%20Please%20help%20me." target="_blank" class="course-pill">
         <span class="course-pill-icon">🌐</span>
         <span class="course-pill-name">Int'l Licensing</span>
         <span class="course-pill-sub">Complete Medical Guidance</span>
       </a>
     </div>
     <a href="#apply" class="hero-cta" onclick="openApplyModal()">Apply Now — Start Your Journey</a>
+
+    <!-- HERO GUARANTEE — MAXIMUM PREMIUM -->
+    <div style="margin-top:40px;display:inline-block;position:relative;animation:heroFloat 3s ease-in-out infinite;">
+      <!-- OUTER RING — animated gold border -->
+      <div style="position:absolute;inset:-2px;border-radius:20px;background:linear-gradient(135deg,#9E7B2E,#E2C97E,#fff8c0,#E2C97E,#9E7B2E);z-index:0;"></div>
+      <div style="position:absolute;inset:-1px;border-radius:19px;background:#0d2918;z-index:0;"></div>
+      <!-- CARD BODY -->
+      <div style="position:relative;z-index:1;border-radius:18px;overflow:hidden;display:flex;align-items:stretch;box-shadow:0 0 60px rgba(201,168,76,0.25),inset 0 0 40px rgba(0,0,0,0.3);">
+        <!-- LEFT — solid gold trophy column -->
+        <div style="background:linear-gradient(180deg,#7a5c1e 0%,#C9A84C 30%,#E2C97E 55%,#C9A84C 75%,#7a5c1e 100%);padding:26px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;flex-shrink:0;min-width:80px;">
+          <span style="font-size:2.4rem;line-height:1;animation:trophyPulse 1.5s ease-in-out infinite;filter:drop-shadow(0 0 12px rgba(0,0,0,0.5));">🏆</span>
+          <div style="font-family:'Josefin Sans',sans-serif;font-size:0.5rem;font-weight:900;letter-spacing:0.14em;color:#1a3d0a;text-transform:uppercase;text-align:center;line-height:1.3;">ONLY<br>US</div>
+        </div>
+
+        <!-- CENTER — main message -->
+        <div style="background:linear-gradient(135deg,#020f07 0%,#041a0a 50%,#071e0c 100%);padding:26px 36px;position:relative;flex:1;">
+          <!-- subtitle label -->
+          <div style="font-family:'Josefin Sans',sans-serif;font-size:0.65rem;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold-light);margin-bottom:10px;display:flex;align-items:center;gap:10px;">
+            <span style="flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.6));"></span>
+            EXCLUSIVE MONEY-BACK GUARANTEE
+            <span style="flex:1;height:1px;background:linear-gradient(90deg,rgba(201,168,76,0.6),transparent);"></span>
+          </div>
+          <!-- MAIN HEADLINE 1 — big white bold -->
+          <div style="font-family:'Playfair Display',serif;font-size:clamp(1.3rem,3vw,1.7rem);font-weight:900;color:#ffffff;letter-spacing:0.06em;line-height:1.15;text-shadow:0 0 40px rgba(201,168,76,0.5),0 3px 8px rgba(0,0,0,1);white-space:nowrap;">
+            ONLY COACHING CENTRE IN KASHMIR
+          </div>
+          <!-- MAIN HEADLINE 2 — animated gold shimmer -->
+          <div style="font-family:'Playfair Display',serif;font-size:clamp(1.35rem,3.2vw,1.8rem);font-weight:900;letter-spacing:0.06em;line-height:1.15;white-space:nowrap;margin-top:6px;background:linear-gradient(90deg,#7a5c1e 0%,#C9A84C 20%,#E2C97E 40%,#fff8c0 55%,#E2C97E 70%,#C9A84C 85%,#7a5c1e 100%);background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldText 1.8s linear infinite;">
+            REFUNDING 50% MONEY IF FAILED
+          </div>
+        </div>
+
+        <!-- RIGHT — bold red refund badge -->
+        <div style="background:linear-gradient(180deg,#7d1f17 0%,#c0392b 25%,#e74c3c 55%,#c0392b 80%,#7d1f17 100%);padding:26px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;gap:1px;animation:badgePop 1.8s ease-in-out infinite;min-width:78px;box-shadow:inset 0 0 20px rgba(0,0,0,0.4);">
+          <div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;color:white;line-height:1;text-shadow:0 2px 12px rgba(0,0,0,0.6);">50%</div>
+          <div style="width:32px;height:1px;background:rgba(255,255,255,0.4);margin:4px 0;"></div>
+          <div style="font-family:'Josefin Sans',sans-serif;font-size:0.58rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.95);">REFUND</div>
+          <div style="font-family:'Josefin Sans',sans-serif;font-size:0.5rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);">IF FAILED</div>
+        </div>
+      </div>
+    </div>
+    <style>
+      @keyframes heroFloat {
+        0%,100% { transform: translateY(0px); filter: drop-shadow(0 10px 30px rgba(201,168,76,0.55)); }
+        50% { transform: translateY(-10px); filter: drop-shadow(0 24px 50px rgba(201,168,76,0.8)); }
+      }
+
+    </style>
   </div>
 </section>
 
+<div class="gold-divider"></div>
+<div class="gold-divider"></div>
 <!-- STATS BAR -->
 <div class="stats-bar">
   <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Students Enrolled</div></div>
@@ -785,7 +946,7 @@ footer { background: #001A0D; padding: 50px 40px 30px; border-top: 2px solid var
   <div class="stat-item"><div class="stat-num">30+</div><div class="stat-label">Courses Offered</div></div>
 </div>
 
-<!-- ═══════════════════════════════════════════ -->
+<div class="gold-divider"></div>
 <!-- ABOUT SECTION -->
 <!-- ═══════════════════════════════════════════ -->
 <section id="about">
@@ -904,6 +1065,8 @@ footer { background: #001A0D; padding: 50px 40px 30px; border-top: 2px solid var
 </section>
 <!-- ═══════════════════════════════════════════ -->
 
+<div class="gold-divider"></div>
+<div class="gold-divider"></div>
 <!-- FACULTY -->
 <section id="faculty">
   <div class="container">
@@ -991,6 +1154,8 @@ footer { background: #001A0D; padding: 50px 40px 30px; border-top: 2px solid var
   </div>
 </section>
 
+<div class="gold-divider"></div>
+<div class="gold-divider"></div>
 <!-- COURSES -->
 <section id="courses">
   <div class="container">
@@ -1000,7 +1165,7 @@ footer { background: #001A0D; padding: 50px 40px 30px; border-top: 2px solid var
       <p class="section-subtitle">Comprehensive Allied Health Science programs from Bachelor's to Master's level — your career starts here.</p>
     </div>
     <div class="courses-tabs">
-      <button class="course-tab active" onclick="switchCourseTab(this,'bachelor')">🎓 Bachelor's Programs (14)</button>
+      <button class="course-tab active" onclick="switchCourseTab(this,'bachelor')">🎓 Bachelor's Programs (15)</button>
       <button class="course-tab" onclick="switchCourseTab(this,'diploma')">📋 Diploma Programs (11)</button>
       <button class="course-tab" onclick="switchCourseTab(this,'masters')">🏆 Master's Programs (3)</button>
     </div>
@@ -1010,6 +1175,8 @@ footer { background: #001A0D; padding: 50px 40px 30px; border-top: 2px solid var
   </div>
 </section>
 
+<div class="gold-divider"></div>
+<div class="gold-divider"></div>
 <!-- STUDENT LOGIN -->
 <section id="login">
   <div class="container">
@@ -1051,14 +1218,59 @@ footer { background: #001A0D; padding: 50px 40px 30px; border-top: 2px solid var
           </div>
           <button class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,0.4);font-size:0.7rem;" onclick="doLogout()">Logout</button>
         </div>
-        <!-- Floating Offer Card -->
-        <div class="dash-offer-float">
-          <div style="position:relative;z-index:1;">
-            <div class="dash-offer-text">🎓 Special Launch Offer — All Courses <span>₹9,999</span></div>
-            <div class="dash-offer-sub">Limited time · Enroll today and save</div>
+        <!-- DASHBOARD GUARANTEE BANNER — MAXIMUM BOLD -->
+        <div style="position:relative;margin-bottom:22px;animation:floatUpDown 3s ease-in-out infinite;">
+          <div style="position:absolute;inset:-2px;border-radius:17px;background:linear-gradient(135deg,#9E7B2E,#E2C97E,#fff8c0,#E2C97E,#9E7B2E);z-index:0;"></div>
+          <div style="position:absolute;inset:-1px;border-radius:16px;background:#0d2918;z-index:0;"></div>
+          <div style="position:relative;z-index:1;border-radius:15px;overflow:hidden;display:flex;align-items:stretch;box-shadow:0 0 50px rgba(201,168,76,0.2);">
+            <!-- gold left col -->
+            <div style="background:linear-gradient(180deg,#7a5c1e,#C9A84C,#E2C97E,#C9A84C,#7a5c1e);padding:20px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;flex-shrink:0;min-width:70px;">
+              <span style="font-size:2.2rem;line-height:1;animation:trophyPulse 1.5s ease-in-out infinite;">🏆</span>
+              <div style="font-family:'Josefin Sans',sans-serif;font-size:0.48rem;font-weight:900;letter-spacing:0.12em;color:#1a3d0a;text-transform:uppercase;text-align:center;line-height:1.3;">ONLY<br>US</div>
+            </div>
+            <!-- center text -->
+            <div style="background:linear-gradient(135deg,#020f07,#041a0a,#071e0c);padding:20px 22px;flex:1;position:relative;">
+              <div style="font-family:'Josefin Sans',sans-serif;font-size:0.6rem;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold-light);margin-bottom:8px;display:flex;align-items:center;gap:8px;"><span style="flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.5));"></span>EXCLUSIVE GUARANTEE<span style="flex:1;height:1px;background:linear-gradient(90deg,rgba(201,168,76,0.5),transparent);"></span></div>
+              <div style="font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:900;color:#ffffff;letter-spacing:0.05em;line-height:1.2;text-shadow:0 0 35px rgba(201,168,76,0.5),0 3px 7px rgba(0,0,0,1);">ONLY COACHING CENTRE<br>IN KASHMIR</div>
+              <div style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;letter-spacing:0.05em;line-height:1.2;margin-top:5px;background:linear-gradient(90deg,#7a5c1e,#C9A84C,#E2C97E,#fff8c0,#E2C97E,#C9A84C,#7a5c1e);background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldText 1.8s linear infinite;">REFUNDING 50% MONEY IF FAILED</div>
+            </div>
+            <!-- red badge -->
+            <div style="background:linear-gradient(180deg,#7d1f17,#c0392b,#e74c3c,#c0392b,#7d1f17);padding:20px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;gap:1px;animation:badgePop 1.8s ease-in-out infinite;min-width:68px;">
+              <div style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:white;line-height:1;text-shadow:0 2px 10px rgba(0,0,0,0.6);">50%</div>
+              <div style="width:28px;height:1px;background:rgba(255,255,255,0.4);margin:3px 0;"></div>
+              <div style="font-family:'Josefin Sans',sans-serif;font-size:0.52rem;font-weight:900;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.95);">REFUND</div>
+            </div>
           </div>
-          <div class="dash-offer-badge">🔥 Live Offer</div>
         </div>
+
+        <style>
+          @keyframes floatUpDown {
+            0%,100% { transform: translateY(0px); box-shadow: 0 8px 40px rgba(201,168,76,0.45); }
+            50% { transform: translateY(-6px); box-shadow: 0 18px 55px rgba(201,168,76,0.65), 0 0 40px rgba(201,168,76,0.2); }
+          }
+
+          
+            60%,100% { transform: translateX(200%); }
+          }
+          
+            100% { background-position: 200% 0; }
+          }
+          @keyframes goldText {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+          }
+          @keyframes trophyPulse {
+            0%,100% { transform: scale(1); box-shadow: 0 0 18px rgba(201,168,76,0.7); }
+            50% { transform: scale(1.12); box-shadow: 0 0 32px rgba(201,168,76,1); }
+          }
+          @keyframes badgePop {
+            0%,100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+          }
+          @keyframes dotBlink {
+            0%,100% { opacity: 1; } 50% { opacity: 0.2; }
+          }
+        </style>
         <div class="dashboard-cards">
           <div class="dash-card"><div class="dash-card-icon">📚</div><div class="dash-card-label">Enrolled Course</div><div class="dash-card-value" id="dashCourse">—</div></div>
           <div class="dash-card"><div class="dash-card-icon">✅</div><div class="dash-card-label">Status</div><div class="dash-card-value" style="color:var(--gold-light);">Active</div></div>
@@ -1073,6 +1285,8 @@ footer { background: #001A0D; padding: 50px 40px 30px; border-top: 2px solid var
   </div>
 </section>
 
+<div class="gold-divider"></div>
+<div class="gold-divider"></div>
 <!-- APPLY -->
 <section id="apply">
   <div class="container">
@@ -1086,7 +1300,6 @@ footer { background: #001A0D; padding: 50px 40px 30px; border-top: 2px solid var
         <div class="form-group"><label>Full Name *</label><input type="text" id="applyName" placeholder="Your full name"></div>
         <div class="form-group"><label>Phone Number *</label><input type="tel" id="applyPhone" placeholder="+91 XXXXX XXXXX"></div>
         <div class="form-group"><label>Region / State *</label><input type="text" id="applyRegion" placeholder="e.g. Jammu & Kashmir"></div>
-        <div class="form-group"><label>Aadhaar Number *</label><input type="text" id="applyAadhaar" placeholder="XXXX XXXX XXXX"></div>
         <div class="form-group" style="grid-column:span 2"><label>Email ID *</label><input type="email" id="applyEmail" placeholder="your@email.com"></div>
         <div class="form-group" style="grid-column:span 2">
           <label>Selected Course *</label>
@@ -1101,6 +1314,8 @@ footer { background: #001A0D; padding: 50px 40px 30px; border-top: 2px solid var
   </div>
 </section>
 
+<div class="gold-divider"></div>
+<div class="gold-divider"></div>
 <!-- CONTACT -->
 <section id="contact">
   <div class="container">
@@ -1113,7 +1328,7 @@ footer { background: #001A0D; padding: 50px 40px 30px; border-top: 2px solid var
           <div class="contact-icon">✉️</div>
           <div>
             <div class="contact-item-title">Email</div>
-            <div class="contact-item-value"><a href="mailto:experteaseconsultancyofficial@gmail.com">experteaseconsultancyofficial@gmail.com</a></div>
+            <div class="contact-item-value"><a href="mailto:experteaseconsultancyofficial@gmail.com" style="color:var(--gold-light);text-decoration:none;">experteaseconsultancyofficial@gmail.com</a></div>
           </div>
         </div>
         <div class="contact-item">
@@ -1149,6 +1364,8 @@ footer { background: #001A0D; padding: 50px 40px 30px; border-top: 2px solid var
   </div>
 </section>
 
+<div class="gold-divider"></div>
+<div class="gold-divider"></div>
 <!-- DEVELOPER -->
 <section id="developer">
   <div class="container text-center">
@@ -1161,7 +1378,7 @@ footer { background: #001A0D; padding: 50px 40px 30px; border-top: 2px solid var
       <div class="dev-title">Full-Stack Web Developer &amp; UI/UX Designer</div>
       <div class="dev-links">
         <a href="https://www.linkedin.com/in/zahik-abas-2646572a4" target="_blank" class="dev-link"><span class="dev-link-icon">💼</span><span>linkedin.com/in/zahik-abas-2646572a4</span></a>
-        <a href="mailto:zahikabas.btec@gmail.com" class="dev-link"><span class="dev-link-icon">✉️</span><span>zahikabas.btec@gmail.com</span></a>
+        <a href="mailto:experteaseconsultancyofficial@gmail.com" class="dev-link"><span class="dev-link-icon">✉️</span><span>experteaseconsultancyofficial@gmail.com</span></a>
         <a href="tel:9149793081" class="dev-link"><span class="dev-link-icon">📞</span><span>9149793081</span></a>
       </div>
     </div>
@@ -1191,7 +1408,7 @@ footer { background: #001A0D; padding: 50px 40px 30px; border-top: 2px solid var
       <div>
         <div class="footer-col-title">Contact</div>
         <div class="footer-links">
-          <a href="mailto:experteaseconsultancyofficial@gmail.com">experteaseconsultancyofficial@gmail.com</a>
+          <a href="mailto:experteaseconsultancyofficial@gmail.com" style="color:rgba(255,255,255,0.5);text-decoration:none;">experteaseconsultancyofficial@gmail.com</a>
           <a href="tel:7889371630">+91 7889371630</a>
           <a href="https://wa.me/7889371630" target="_blank">💬 WhatsApp Us</a>
           <a href="#developer">Developer</a>
@@ -1267,6 +1484,7 @@ const bachelorCourses = [
   ["B.Sc. Neuro Electrophysiology", "EEG, EMG, and neurological diagnostic techniques."],
   ["B.Sc. Audiology and Speech Therapy", "Hearing assessment, audiometric testing and speech rehabilitation."],
   ["B.Sc. Nuclear Medicine Technology", "Radioactive isotope handling, PET/SPECT scanning and nuclear therapy."],
+  ["B.Sc. Nursing", "Comprehensive nursing education covering medical-surgical, pediatrics, OBG, community health and clinical practice."],
 ];
 const diplomaCourses = [
   ["Diploma in Medical Laboratory Technology (DMLT)", "Entry-level lab training covering major diagnostic disciplines."],
@@ -1392,11 +1610,10 @@ function submitApplication() {
   const name = document.getElementById('applyName').value.trim();
   const phone = document.getElementById('applyPhone').value.trim();
   const region = document.getElementById('applyRegion').value.trim();
-  const aadhaar = document.getElementById('applyAadhaar').value.trim();
   const email = document.getElementById('applyEmail').value.trim();
   const course = document.getElementById('applyCourse').value;
-  if (!name||!phone||!region||!aadhaar||!email||!course) return alert('Please fill all required fields.');
-  const msg = encodeURIComponent(`Hello Expertease Platform,\n\nNew Application:\n*Name:* ${name}\n*Phone:* ${phone}\n*Region:* ${region}\n*Aadhaar:* ${aadhaar}\n*Email:* ${email}\n*Course:* ${course}\n\nKindly process my enrollment.`);
+  if (!name||!phone||!region||!email||!course) return alert('Please fill all required fields.');
+  const msg = encodeURIComponent(`Hello Expertease Platform,\n\nNew Application:\n*Name:* ${name}\n*Phone:* ${phone}\n*Region:* ${region}\n*Email:* ${email}\n*Course:* ${course}\n\nKindly process my enrollment.`);
   window.open(`https://wa.me/7889371630?text=${msg}`, '_blank');
 }
 
@@ -1412,7 +1629,7 @@ const chatResponses = {
   },
   courses: {
     user: "Tell me about courses",
-    bot: "We offer 29 programs! 🎓 14 Bachelor's (BMLT, Radiology, OT, BPT, Cardiac, etc.) · 📋 11 Diplomas (DMLT, X-Ray, ICU, etc.) · 🏆 3 Master's (MLT, MPT, Radiology). All courses at ₹9,999 — scroll to Courses to see all!"
+    bot: "We offer 30 programs! 🎓 15 Bachelor's (BMLT, Nursing, Radiology, OT, BPT, Cardiac, etc.) · 📋 11 Diplomas (DMLT, X-Ray, ICU, etc.) · 🏆 3 Master's (MLT, MPT, Radiology). All courses at ₹9,999 — scroll to Courses to see all!"
   },
   payment: {
     user: "Payment process",
@@ -1464,6 +1681,73 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 document.getElementById('applyModal').addEventListener('click', function(e) {
   if (e.target === this) closeModal('applyModal');
+});
+</script>
+
+<!-- PREMIUM FINISH JS -->
+<script>
+// Header shrink
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+  hdr.classList.toggle('scrolled', window.scrollY > 60);
+  const secs = ['home','about','faculty','courses','login','apply','contact','developer'];
+  let cur = '';
+  secs.forEach(id => { const el=document.getElementById(id); if(el&&window.scrollY>=el.offsetTop-140) cur=id; });
+  document.querySelectorAll('nav a').forEach(a => a.classList.toggle('active-nav', a.getAttribute('href')==='#'+cur));
+},{passive:true});
+
+// Scroll reveal
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('revealed');ro.unobserve(e.target);} });
+},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+
+
+
+// Counter animation
+function animCount(el,target,suf){
+  const dur=2000,t0=performance.now();
+  function step(now){
+    const p=Math.min((now-t0)/dur,1);
+    const ease=1-Math.pow(1-p,3);
+    const v=Math.round(target*ease);
+    el.textContent=v+suf;
+    if(p<1)requestAnimationFrame(step);
+    else el.textContent=target+suf;
+  }
+  requestAnimationFrame(step);
+}
+const so=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting)return;
+    e.target.querySelectorAll('.stat-num').forEach(el=>{
+      const raw=el.textContent;
+      const suf=raw.replace(/[0-9.+%KkMm]/g,'');
+      const num=parseInt(raw);
+      animCount(el,num,raw.replace(String(num),''));
+    });
+    so.unobserve(e.target);
+  });
+},{threshold:0.5});
+const sb=document.querySelector('.stats-bar');
+if(sb)so.observe(sb);
+
+// Apply reveal classes after DOM ready
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faculty-card').forEach((el,i)=>{el.classList.add('reveal');el.style.transitionDelay=(i*0.15)+'s';});
+  document.querySelectorAll('.about-stat-card').forEach((el,i)=>{el.classList.add('reveal');el.style.transitionDelay=(i*0.1)+'s';});
+  document.querySelectorAll('.contact-item').forEach((el,i)=>{el.classList.add('reveal-left');el.style.transitionDelay=(i*0.12)+'s';});
+  document.querySelectorAll('.academy-focus-item').forEach((el,i)=>{el.classList.add('reveal');el.style.transitionDelay=(i*0.08)+'s';});
+  document.querySelectorAll('.about-stat-card,.faculty-card,.contact-item,.academy-focus-item,.about-commitment-card,.dev-card').forEach(el=>ro.observe(el));
+  // Course card entrance animation
+  function animateCards(gridId){
+    document.querySelectorAll('#'+gridId+' .course-card').forEach((el,i)=>{
+      el.style.cssText='opacity:0;transform:translateY(22px);transition:opacity 0.45s ease,transform 0.45s ease;transition-delay:'+(i*0.04)+'s;';
+      setTimeout(()=>{el.style.opacity='1';el.style.transform='none';},50);
+    });
+  }
+  setTimeout(()=>animateCards('bachelorGrid'),400);
+  const orig=window.switchCourseTab;
+  window.switchCourseTab=function(btn,gid){orig(btn,gid);setTimeout(()=>animateCards(gid+'Grid'),20);};
 });
 </script>
 </body>
