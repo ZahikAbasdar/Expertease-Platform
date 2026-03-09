@@ -101,7 +101,7 @@ section { padding: 90px 40px; }
 
 /* ─── FACULTY ─── */
 #faculty { background: linear-gradient(160deg, #F0EDE4 0%, #E8E3D8 100%); }
-.faculty-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; margin-top: 50px; }
+.faculty-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 50px; }
 .faculty-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid rgba(201,168,76,0.18); transition: all 0.4s ease; position: relative; }
 .faculty-card:hover { transform: translateY(-8px); box-shadow: 0 30px 60px rgba(0,0,0,0.12); border-color: rgba(201,168,76,0.4); }
 .faculty-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--green) 0%, var(--gold) 100%); }
@@ -521,7 +521,6 @@ section { padding: 90px 40px; }
   overflow: hidden;
 }
 
-@keyframes dashOfferPulse {
   50% { box-shadow: 0 0 20px 4px rgba(201,168,76,0.12); }
 }
 
@@ -829,7 +828,7 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
   .about-commitment-grid { grid-template-columns: 1fr; }
   .courses-tabs { flex-wrap: wrap; gap: 8px; }
   .course-tab { font-size: 0.75rem; padding: 9px 16px; flex: 1 1 auto; min-width: 120px; }
-  .faculty-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .faculty-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
   /* Hero guarantee — allow wrap on tablet */
   .hero-content { padding: 0 10px; }
 }
@@ -1082,7 +1081,7 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 <div class="stats-bar">
   <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Students Enrolled</div></div>
   <div class="stat-item"><div class="stat-num">95%</div><div class="stat-label">Pass Rate</div></div>
-  <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">Expert Faculty</div></div>
+  <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">Expert Faculty</div></div>
   <div class="stat-item"><div class="stat-num">30+</div><div class="stat-label">Courses Offered</div></div>
 </div>
 
@@ -1326,7 +1325,7 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
             </div>
           </div>
           <div style="margin-top:16px;padding-top:14px;border-top:1px solid rgba(0,108,53,0.12);display:flex;flex-direction:column;gap:6px;">
-            <a href="mailto:umerulislam6@gmail.com" style="font-size:0.85rem;color:var(--green);text-decoration:none;display:flex;align-items:center;gap:6px;"><span>✉️</span>umerulislam6@gmail.com</a>
+            <a href="/cdn-cgi/l/email-protection#83f6eee6f1f6efeaf0efe2eeb5c3e4eee2eaefade0ecee" style="font-size:0.85rem;color:var(--green);text-decoration:none;display:flex;align-items:center;gap:6px;"><span>✉️</span><span class="__cf_email__" data-cfemail="e99c848c9b9c85809a858884dfa98e84888085c78a8684">[email&#160;protected]</span></a>
             <a href="tel:+918825066872" style="font-size:0.85rem;color:var(--green);text-decoration:none;display:flex;align-items:center;gap:6px;"><span>📞</span>+91 88250 66872</a>
           </div>
         </div>
@@ -1461,6 +1460,13 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
             0%,100% { transform: translateY(0px); box-shadow: 0 8px 40px rgba(201,168,76,0.45); }
             50% { transform: translateY(-6px); box-shadow: 0 18px 55px rgba(201,168,76,0.65), 0 0 40px rgba(201,168,76,0.2); }
           }
+
+          
+            60%,100% { transform: translateX(200%); }
+          }
+          
+            100% { background-position: 200% 0; }
+          }
           @keyframes goldText {
             0% { background-position: 0% 50%; }
             100% { background-position: 200% 50%; }
@@ -1509,7 +1515,7 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
         <div class="form-group" style="grid-column:span 2"><label>Email ID *</label><input type="email" id="applyEmail" placeholder="your@email.com"></div>
         <div class="form-group" style="grid-column:span 2">
           <label>Selected Course *</label>
-          <select id="applyCourse" style="background:#FAFAF8;border:1px solid rgba(0,108,53,0.2);color:var(--text-dark);padding:11px 14px;border-radius:8px;width:100%;font-family:'Crimson Pro',serif;font-size:1rem;outline:none;-webkit-appearance:none;appearance:none;">
+          <select id="applyCourse" style="background:#FAFAF8;border:1px solid rgba(0,108,53,0.2);color:var(--text-dark);padding:11px 14px;border-radius:8px;width:100%;font-family:'Crimson Pro',serif;font-size:1rem;outline:none;-webkit-appearance:none;">
             <option value="">Choose your course...</option>
           </select>
         </div>
@@ -1673,7 +1679,7 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ─── COURSE DATA ───────────────────────────────────────────────────────────────
 const bachelorCourses = [
   ["B.Sc. Nursing", "Comprehensive nursing education covering medical-surgical, pediatrics, OBG, community health and clinical practice."],
@@ -1964,12 +1970,4 @@ document.addEventListener('DOMContentLoaded',()=>{
   var e=u+'@'+d;
   var m='mailto:'+e;
   var el1=document.getElementById('contactEmailLink');
-  if(el1){el1.href=m;el1.textContent=e;}
-  var el2=document.getElementById('contactEmailText');
-  if(el2){el2.textContent=e;}
-  var el3=document.getElementById('footerEmailLink');
-  if(el3){el3.href=m;el3.textContent=e;}
-})();
-</script>
-</body>
-</html>
+  i
